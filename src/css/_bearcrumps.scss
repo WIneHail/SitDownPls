@@ -1,0 +1,28 @@
+.breadcrumps {
+  order: 3;
+  padding-top: 11px;
+  width: 100%;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    .link--active {
+      color: $colorBlackPurp;
+    }
+  }
+
+  &__link {
+    @include link (14px, 14px, $fontColGray)
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 5px;
+
+    &::after {
+      content: "/";
+      color: $fontColGray;
+    }
+  }
+}

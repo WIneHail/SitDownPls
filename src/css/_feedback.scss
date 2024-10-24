@@ -1,0 +1,154 @@
+.container--feedback {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 69px;
+}
+
+.container--feedback::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url(../img/feedback_back-desk.png);
+  background-repeat: no-repeat;
+  right: 15px;
+  top: 56px;
+  width: 48%;
+  min-height: 383px;
+}
+
+.feedback {
+  &__header {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: $priceReg;
+  }
+
+  &__wrapper {
+    max-width: 49%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 17px;
+    border-radius: 10px;
+    border: 2px solid $backgColGray;
+    outline: none;
+    background-color: $backgColGray;
+
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+
+    @media (hover:hover) {
+      &:hover {
+        background-color: $backgColGrayBlack;
+      }
+    }
+
+    &:focus {
+      background-color: #F8EFFF;
+      border-color: $decorColPurple;
+    }
+
+    &:active {
+      background-color: $backgColGray;
+      border: 2px solid $backgColGray;
+      outline: 1px solid #B8EC64;
+    }
+  }
+
+  &__btn {
+    @include btnFilled();
+    margin-bottom: 13px;
+    padding: 16px 30px;
+  }
+
+  &__checkbox-label {
+    position: relative;
+    padding-left: 22px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $decorColPurple;
+  }
+}
+
+@media (max-width: 1410px) {
+  .container--feedback {
+    padding-top: 31px;
+
+    &::before {
+      background-size: contain;
+      right: 39px;
+      top: 111px;
+      width: 50%;
+    }
+  }
+
+  .feedback {
+    &__wrapper {
+      max-width: 42.5%;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .feedback {
+    &__wrapper {
+      max-width: 60%;
+    }
+  }
+
+  .container--feedback {
+
+    &::before {
+      background-image: url(../img/feedback_back-768.png);
+      right: -49px;
+      top: 45px;
+      width: 40%;
+      min-height: 444px;
+    }
+
+  }
+}
+
+@media (max-width: 767px) {
+  .container--feedback {
+    &::before {
+      display: none;
+    }
+  }
+
+  .feedback {
+    &__wrapper {
+      max-width: 100%;
+    }
+
+    &__text span {
+      display: block;
+    }
+
+    &__checkbox-label {
+      padding-left: 20px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 16.34px;
+    }
+  }
+}

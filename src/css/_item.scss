@@ -1,0 +1,510 @@
+.container--item {
+  padding-top: 3px;
+  padding-bottom: 10px;
+}
+
+.item {
+
+  .head {
+    position: relative;
+    display: flex;
+    justify-content: right;
+    padding: 35px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 50%;
+      left: 0;
+      top: 43px;
+      min-height: 245px;
+      background-image: url(../img/D-31_big.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &__header {
+      margin-bottom: 5px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 31px;
+    }
+
+    &__text {
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+      color: $fontColGray;
+    }
+
+    &__card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      align-items: flex-start;
+      padding: 30px 16px 17px;
+      flex-basis: 50%;
+      min-height: 245px;
+      @include cardBadgeStar("4.8");
+
+      &:after {
+        left: 15px;
+        top: 7px;
+      }
+    }
+
+    &__price {
+      margin-bottom: 21px;
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 47px;
+    }
+
+    &__controls {
+      display: flex;
+      flex-direction: column
+    }
+
+    &__btn.btn--buy {
+      @include btnFilled;
+      margin-bottom: 14px;
+      padding: 16px 33px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+
+    &__btn.btn--add-to-cart {
+      @include link (16px, 21px, $decorColPurple);
+      margin-bottom: 13px;
+    }
+  }
+
+  .description {
+    padding: 45px 0;
+    display: flex;
+    row-gap: 30px;
+
+    &__header {
+      margin-bottom: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 16px;
+    }
+
+    &__text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 25px;
+    }
+
+    &__text span {
+      margin-top: 8px;
+      display: inline-block;
+    }
+
+    &__wrapper {
+      position: relative;
+      margin-right: 32px;
+      max-width: 624px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        left: 0;
+        bottom: 0;
+        width: 526px;
+        min-height: 113px;
+        background-image: url(../img/card__scheme.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .stats {
+
+      &__wrapper {
+        display: flex;
+        max-width: 328px;
+        white-space: nowrap;
+      }
+
+      &__item {
+        display: flex;
+      }
+
+      &__header {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        color: $fontColGray;
+      }
+
+      &__value {
+        text-align: left;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+        color: $fontColBlack;
+      }
+
+      &__bullets {
+        padding-top: 3em;
+        overflow: hidden;
+        font-size: 5px;
+        font-weight: 400;
+        letter-spacing: 0.6em;
+      }
+    }
+  }
+
+  .similar {
+    padding-top: 37px;
+    padding-bottom: 60px;
+
+    &__header {
+      margin-bottom: 24px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 31px;
+    }
+
+    .goods__item {
+      &:nth-child(1) {
+        &::before {
+          background-image: url(../img/R-85.png);
+          top: 86px;
+        }
+
+        &::after {
+          content: "4,5";
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          background-image: url(../img/H-85.png);
+          top: 58px;
+        }
+
+        &::after {
+          content: "4,6";
+        }
+      }
+
+      &:nth-child(3) {
+        &::before {
+          background-image: url(../img/S-44.png);
+        }
+
+        &::after {
+          content: "4,5";
+        }
+      }
+
+      &:nth-child(4) {
+        &::before {
+          background-image: url(../img/Y-43.png);
+          top: 62px;
+        }
+
+        &::after {
+          content: "4,8";
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1410px) {
+  .container--item {
+    padding-top: unset;
+    padding-bottom: 10px;
+  }
+
+  .item {
+    padding-top: 7px;
+
+    .head {
+      padding-top: unset;
+      padding-bottom: 8px;
+
+      &::before {
+        width: 54%;
+        top: 27px;
+      }
+
+      &__card {
+        padding-top: 26px;
+        flex-basis: 44.2%;
+
+        &:after {
+          left: 16px;
+          top: 5px;
+        }
+      }
+    }
+
+    .description {
+
+      &__wrapper {
+        max-width: 505px;
+        margin-right: 42px;
+
+        &::before {
+          bottom: -3px;
+          left: 3px;
+          width: 100%;
+        }
+      }
+
+      .stats {
+        &__wrapper {
+          max-width: 189px;
+        }
+      }
+    }
+
+    .similar {
+      padding-top: 24px;
+    }
+
+    .goods {
+      &__item:nth-child(4) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container--item {
+    padding-bottom: 48px;
+  }
+
+  .item {
+    padding-top: unset;
+
+    .head {
+      min-height: 630px;
+
+      &::before {
+        width: 100%;
+        top: 14px;
+      }
+
+      &__card {
+        padding-left: 1px;
+        flex-basis: 100%;
+
+        &::after {
+          left: 1px;
+          top: 342px;
+
+        }
+      }
+    }
+
+    .description {
+      flex-direction: column;
+      padding-top: 42px;
+      padding-bottom: 8px;
+
+      &__wrapper {
+        max-width: 515px;
+        min-height: 324px;
+        margin-right: unset;
+        margin-bottom: 3px;
+
+        &::before {
+          left: unset;
+        }
+      }
+    }
+
+    .similar {
+      padding: 24px 0;
+    }
+
+    .goods {
+      &__item {
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .item {
+    padding-top: unset;
+  }
+
+  .container--item {
+    padding-bottom: 46px;
+
+    .head {
+      padding-bottom: 14px;
+      min-height: 394px;
+
+      &__card {
+        padding-top: 1px;
+        padding-right: unset;
+
+        &::after {
+          left: 0px;
+          top: 134px;
+        }
+      }
+
+      &::before {
+        top: 0;
+        min-height: 120px;
+      }
+
+      &__header {
+        margin-bottom: 7px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20.8px;
+      }
+
+      &__text {
+        margin-bottom: 16px;
+
+        & span {
+          display: block;
+        }
+      }
+
+      &__price {
+        margin-bottom: 16px;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 31.2px;
+      }
+
+      &__controls {
+        width: 100%;
+        align-items: center;
+      }
+
+      .btn--buy {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 13px;
+      }
+
+      .btn--add-to-cart {
+        margin-bottom: unset;
+      }
+    }
+
+    .description {
+      padding-top: unset;
+      padding-bottom: 44px;
+
+      &__text {
+        padding-right: 2px;
+      }
+
+      &__wrapper {
+        min-height: 403px;
+
+        &::before {
+          min-height: 64px;
+          bottom: 0;
+        }
+      }
+
+      .stats {
+        &__item {
+          flex-direction: column;
+        }
+
+        &__item:not(:last-child) {
+          margin-bottom: 5.3px;
+        }
+
+        &__bullets {
+          display: none;
+        }
+
+        &__value {
+          line-height: 22px;
+        }
+
+        &__header {
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 13.62px;
+        }
+      }
+    }
+
+    .similar {
+      .grid {
+        grid-auto-rows: 278px;
+        gap: 16px;
+      }
+
+      .goods {
+        &__item {
+          grid-column: auto / span 3;
+          padding: 13px 7px 17px 16px;
+
+
+          &:nth-child(n)::after {
+            left: 16px;
+            top: 16px;
+            width: 36px;
+            background-image: url(../img/star-small.svg);
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 15px;
+          }
+
+          &:nth-child(n)::before {
+            background-size: contain;
+            height: 33px;
+            left: 7px;
+            top: 50px;
+          }
+
+          &:nth-child(1)::before {
+            height: 45px;
+            top: 46px;
+          }
+
+          &:nth-child(2)::before {
+            height: 62px;
+            top: 38px;
+          }
+
+          .card {
+
+            &__header {
+              margin-bottom: 16px;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 21px;
+            }
+
+            &__btn {
+              padding: 9px 23px;
+            }
+
+            &__price--purchase {
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

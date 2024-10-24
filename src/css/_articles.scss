@@ -1,0 +1,152 @@
+.container--articles {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.articles {
+
+  &__header {
+    margin-bottom: 25px;
+  }
+
+  &__card {
+    @include card(auto, 6);
+    padding: 28px 30px;
+
+    .card__text {
+      min-height: 98px;
+      margin-bottom: 37px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 33px;
+      color: $fontColBlack;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 426px;
+      background-repeat: no-repeat;
+    }
+
+
+    &:nth-child(1)::before {
+      background-image: url(../img/artc_desk-1.png);
+    }
+
+    &:nth-child(2)::before {
+      background-image: url(../img/artc_desk-2.png);
+    }
+
+    &:nth-child(3) {
+      display: none;
+
+      &::before {
+        background-image: url(../img/artc_1024-3.png);
+      }
+    }
+
+    &:nth-child(4) {
+      display: none;
+
+      // &::before {}
+    }
+
+    &:nth-child(5) {
+      display: none;
+
+      // &::before {}
+    }
+
+    &:nth-child(6) {
+      display: none;
+
+      // &::before {}
+    }
+  }
+
+
+  &__grid {
+    grid-auto-rows: 676px;
+  }
+
+  &__btn {
+    @include btnTransparent();
+    padding: 15px 34px;
+  }
+}
+
+@media (max-width: 1410px) {
+  .articles {
+    &__grid {
+      grid-auto-rows: 456px;
+    }
+
+    &__card {
+      grid-column: auto / span 3;
+
+      .card__text {
+        margin-bottom: 30px;
+        min-height: 110px;
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      &::before {
+        height: 202px;
+      }
+
+      &:nth-child(1) {
+        .card__text {
+          max-width: 230px;
+        }
+
+        &::before {
+          background-image: url(../img/artc_1024-1.png);
+        }
+      }
+
+      &:nth-child(2)::before {
+        background-image: url(../img/artc_1024-2.png);
+      }
+
+      &:nth-child(3) {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+
+  .articles {
+    &__card {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .articles {
+    &__card {
+      grid-column: auto / span 6;
+
+      &:nth-child(4)::before {
+        background-image: url(../img/artc_1024-4.png);
+      }
+
+      &:nth-child(5)::before {
+        background-image: url(../img/artc_1024-5.png);
+      }
+
+      &:nth-child(n+3) {
+        display: flex;
+      }
+    }
+  }
+}

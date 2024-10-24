@@ -1,0 +1,94 @@
+.container--highrated {
+  padding-top: 35px;
+  padding-bottom: 69px;
+}
+
+.highrated {
+  .highrated__header {
+    margin-bottom: 27px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container--highrated {
+    padding-top: 34px;
+    padding-bottom: 69px;
+  }
+
+  .highrated {
+    .grid {
+      grid-auto-rows: 278px;
+      gap: 16px;
+    }
+
+    .goods {
+      &__item {
+        grid-column: auto / span 3;
+        padding: 13px 7px 18px 16px;
+
+        &:nth-child(n)::after {
+          left: 16px;
+          top: 16px;
+          width: 36px;
+          background-image: url(../img/star-small.svg);
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 15px;
+        }
+
+        &:nth-child(n)::before {
+          background-size: contain;
+          height: 33px;
+          left: 7px;
+        }
+
+        &:nth-child(1)::before {
+          top: 51px;
+        }
+
+        &:nth-child(2)::before {
+          top: 47px;
+          height: 42px;
+        }
+
+        &:nth-child(3)::before {
+          top: 47px;
+          height: 42px;
+        }
+
+        &:nth-child(4)::before {
+          top: 42px;
+          height: 53px;
+        }
+
+        &:nth-child(5)::before {
+          top: 44px;
+          height: 48px;
+        }
+
+        &:nth-child(6)::before {
+          top: 45px;
+          height: 47px;
+        }
+
+        .card {
+
+          &__header {
+            margin-bottom: 16px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 21px;
+          }
+
+          &__btn {
+            padding: 9px 23px;
+          }
+
+          &__price--purchase {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}

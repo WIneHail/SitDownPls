@@ -1,0 +1,125 @@
+.goods {
+  &__header {
+    margin-bottom: 27px;
+  }
+
+
+  &__grid {
+    grid-auto-rows: 420px;
+  }
+
+  &__item {
+    @include card(auto, 3);
+    padding: 30px 7px 30px 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 13px;
+      top: 80px;
+      width: 91%;
+      height: 130px;
+      background-position: top;
+      background-repeat: no-repeat;
+    }
+
+    .card__price--purchase {
+      margin-bottom: 23px;
+      font-size: 16px;
+      color: $fontColGray;
+    }
+
+    &:nth-child(1) {
+      @include cardBadgeStar('5.0');
+
+      &::before {
+        top: 108px;
+        background-image: url(../img/R-94.png);
+      }
+    }
+
+    &:nth-child(2) {
+      @include cardBadgeStar('4.9');
+
+      &::before {
+        top: 89px;
+        background-image: url(../img/T-75.png);
+      }
+    }
+
+    &:nth-child(3) {
+      @include cardBadgeStar('4.8');
+
+      &::before {
+        top: 87px;
+        background-image: url(../img/D-31.png);
+      }
+    }
+
+    &:nth-child(4) {
+      @include cardBadgeStar('4.8');
+
+      &::before {
+        top: 65px;
+        background-image: url(../img/Y-68.png);
+      }
+    }
+
+    &:nth-child(5) {
+      @include cardBadgeStar('4.8');
+
+      &::before {
+        top: 75px;
+        background-image: url(../img/W-95.png);
+      }
+    }
+
+    &:nth-child(6) {
+      @include cardBadgeStar('4.8');
+
+      &::before {
+        top: 75px;
+        background-image: url(../img/G-41.png);
+      }
+    }
+
+    &:nth-child(7) {
+      @include cardBadgeStar('4.8');
+
+      &::before {
+        top: 62px;
+        background-image: url(../img/V-43.png);
+      }
+    }
+
+    &:nth-child(8) {
+      @include cardBadgeStar('4.7');
+
+      &::before {
+        top: 68px;
+        background-image: url(../img/S-99.png);
+      }
+    }
+
+    &:nth-child(9) {
+      @include cardBadgeStar('4.7');
+
+      &::before {
+        top: 66px;
+        background-image: url(../img/F-85.png);
+      }
+    }
+  }
+}
+
+@media (max-width: 1410px) {
+  .goods {
+    &__item {
+
+      &:nth-child(7),
+      &:nth-child(8) {
+        display: none;
+      }
+    }
+  }
+}

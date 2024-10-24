@@ -1,0 +1,267 @@
+.container--partnership {
+  padding-top: 33px;
+  padding-bottom: 48px;
+}
+
+.partners,
+.gets,
+.advantages,
+.warranty {
+  max-width: 843px;
+}
+
+.partnership {
+
+  .breadcrumps {
+    margin-bottom: 34px;
+  }
+
+  h2 {
+    margin-bottom: 13px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  &__header {
+    margin-bottom: 12px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 32px;
+  }
+
+  .partners {
+    padding-top: 20px;
+    padding-bottom: 12px;
+
+    &__text {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 29px;
+    }
+  }
+
+  .gets {
+    padding-top: 20px;
+    padding-bottom: 13px;
+
+    &__text {
+      position: relative;
+      max-width: 624px;
+      margin-bottom: 12px;
+      padding-left: 37px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 24px;
+
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 25px;
+        height: 25px;
+      }
+
+      &:nth-child(2)::before {
+        background-image: url(../img/network.png);
+      }
+
+      &:nth-child(3)::before {
+        background-image: url(../img/briefcase.png);
+      }
+
+      &:nth-child(4)::before {
+        background-image: url(../img/git-pull-request.png);
+      }
+    }
+  }
+
+  .advantages {
+    padding-top: 7px;
+    padding-bottom: 2px;
+
+    &__text {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 29px;
+    }
+
+    &__title {
+      margin-bottom: 13px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      color: $decorColOrange;
+    }
+  }
+
+  .warranty {
+    padding: 20px 0;
+
+    &__item {
+      max-width: 822px;
+      padding-left: 9px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 29px;
+    }
+
+    &__item:not(:last-child) {
+      margin-bottom: 12px;
+    }
+
+    &__list {
+      list-style-type: decimal;
+      list-style-position: outside;
+      padding-left: 17px;
+      margin-bottom: 30px;
+    }
+
+    &__item::marker {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 29px;
+      color: $decorColOrange;
+    }
+
+    &__note {
+      position: relative;
+      max-width: 624px;
+      padding: 23px 10px 23px 109px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 77px;
+        background-image: url(../img/pen.png);
+        background-repeat: no-repeat;
+      }
+    }
+
+
+  }
+}
+
+@media (max-width: 1410px) {
+  .container--partnership {
+    padding-top: 12px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container--partnership {
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container--partnership {
+    padding-top: 1px;
+    padding-bottom: 27px;
+  }
+
+  .partnership {
+    padding-bottom: unset;
+
+    &__header {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    .partners {
+      padding-top: 21px;
+
+      &__header {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+
+      &__text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+      }
+    }
+
+    .gets {
+      &__header {
+        margin-bottom: 11px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+
+      &__text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+      }
+    }
+
+    .advantages {
+      &__header {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19.07px;
+      }
+
+      &__text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+      }
+    }
+
+    .warranty {
+
+      &__header {
+        margin-bottom: 11px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 21.79px;
+      }
+
+      &__item {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 25px;
+      }
+
+      &__item:not(:last-child) {
+        margin-bottom: 9px;
+      }
+
+      &__note {
+        padding: 3px 56px 23px 52px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+
+        & span {
+          display: block;
+        }
+
+        &::before {
+          width: 36px;
+          height: 54px;
+          top: 12px;
+          background-size: contain;
+        }
+      }
+
+    }
+  }
+}

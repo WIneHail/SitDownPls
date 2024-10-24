@@ -1,0 +1,324 @@
+.container--top {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.top {
+  &__header {
+    margin-bottom: 25px;
+  }
+
+  &__grid {
+    grid-template-rows: 511px 405px;
+    gap: 33px;
+  }
+
+  &__item {
+    padding: 30px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 122px;
+      left: 0;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(1) {
+      @include card(auto, 6);
+      justify-content: space-between;
+
+      &::before {
+        width: 515px;
+        height: 308px;
+        background-image: url(../img/top_sofa.png);
+      }
+    }
+
+    &:nth-child(2) {
+      @include card(auto, 6);
+      justify-content: space-between;
+
+      &::before {
+        width: 515px;
+        height: 308px;
+        background-image: url(../img/top_armchair.png);
+      }
+    }
+
+    &:nth-child(3) {
+      @include card(auto, 4);
+      justify-content: space-between;
+      max-height: 405px;
+
+      &::before {
+        width: 350px;
+        height: 215px;
+        background-image: url(../img/top_bed.png);
+      }
+    }
+
+    &:nth-child(4) {
+      @include card(auto, 4);
+      justify-content: space-between;
+      max-height: 405px;
+
+      .card__tags {
+        .tags__link:not(:last-child) {
+          margin-right: 26px;
+        }
+      }
+
+      &::before {
+        width: 350px;
+        height: 215px;
+        background-image: url(../img/top_dresser.png);
+      }
+    }
+
+    &:nth-child(5) {
+      @include card(auto, 4);
+      justify-content: space-between;
+      max-height: 405px;
+
+      .card__tags {
+        .tags__link:not(:last-child) {
+          margin-right: 43px;
+        }
+      }
+
+      &::before {
+        width: 350px;
+        height: 215px;
+        background-image: url(../img/top_chair.png);
+      }
+    }
+
+  }
+}
+
+@media (max-width: 1410px) {
+  .top {
+
+    &__grid {
+      grid-template-rows: 511px 511px;
+      gap: 32px;
+    }
+
+    &__item {
+      padding: 30px 29px 30px;
+
+      &:nth-child(2) {
+        order: 1;
+        grid-column: auto / span 3;
+        justify-content: space-between;
+        overflow: hidden;
+
+        &::before {
+          left: -237px;
+          top: 125px;
+          height: 297px;
+          background-size: contain;
+        }
+
+      }
+
+      &:nth-child(3) {
+        grid-column: auto / span 3;
+        max-height: unset;
+        justify-content: space-between;
+        overflow: hidden;
+
+        &::before {
+          top: 128px;
+          width: 448px;
+          height: 296px;
+          background-size: contain;
+        }
+      }
+
+      &:nth-child(4) {
+        grid-column: auto / span 3;
+        justify-content: space-between;
+        max-height: unset;
+
+        &::before {
+          top: 127px;
+          width: 252px;
+          height: 296px;
+          background-image: url(../img/top_dresser-1024.png);
+        }
+      }
+
+      &:nth-child(5) {
+        order: 1;
+        grid-column: auto / span 3;
+        max-height: unset;
+
+        &::before {
+          top: 127px;
+          left: 0;
+          width: 378px;
+          height: 296px;
+          background-image: url(../img/top_chair-1024.png);
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .top {
+
+
+    &__grid {
+      grid-auto-rows: 511px;
+    }
+
+    &__item {
+      &:nth-child(4) {
+        order: 1;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .container--top {
+    padding-top: 52px;
+  }
+
+  .top {
+
+    &__grid {
+      grid-template-rows: 332px 206px 206px;
+      grid-auto-rows: 332px;
+      column-gap: 17px;
+    }
+
+    &__item {
+      overflow: hidden;
+
+      .card__content {
+        display: flex;
+        align-items: baseline;
+      }
+
+      .card__link-header {
+        align-self: end;
+      }
+
+      &::before {
+        background-size: contain;
+      }
+
+      &:nth-child(1) {
+
+
+        &::before {
+          width: 354px;
+          height: 212px;
+          top: 105px;
+          left: -49px;
+        }
+      }
+
+
+      &:nth-child(n+2) {
+        padding: 16px 15px 16px;
+
+        .card__header {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 22px;
+        }
+
+        .tags {
+          flex-direction: column;
+          margin-bottom: 6px;
+
+          &__link:not(:last-child) {
+            margin-right: unset;
+            margin-bottom: 5px;
+          }
+
+          &__link {
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 10px;
+          }
+
+        }
+
+      }
+
+      &:nth-child(2)::before {
+        top: 87px;
+        left: 0;
+        width: 100%;
+        height: 104px;
+        background-image: url(../img/top_armchair-320.png);
+      }
+
+      &:nth-child(3)::before {
+        top: 87px;
+        width: 157px;
+        height: 104px;
+      }
+
+      &:nth-child(4) {
+        .card__link-header {
+          padding-top: 16px;
+        }
+
+        &::before {
+          top: 104px;
+          width: 100%;
+          height: 104px;
+          background-image: url(../img/top_dresser-320.png);
+        }
+      }
+
+      &:nth-child(5)::before {
+        top: 88px;
+        width: 100%;
+        height: 104px;
+        background-image: url(../img/top_chair-320.png);
+      }
+
+      &:nth-child(4) {
+
+        .card {
+          &__header {
+            line-height: 17px;
+          }
+        }
+
+      }
+    }
+
+    .card__link-header {
+      display: inline-block;
+      position: relative;
+      border: 2px solid transparent;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: transparent;
+      transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+      @media (hover:hover) {
+        &:hover {
+          color: $colorBlackPurp;
+        }
+      }
+
+      &:focus {
+        color: $colorPalePurp;
+      }
+
+    }
+  }
+}

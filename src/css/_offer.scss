@@ -1,0 +1,201 @@
+.container--offer {
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+
+.offer {
+  &__header {
+    margin-bottom: 26px;
+  }
+
+
+  &__grid {
+    grid-auto-rows: 511px;
+  }
+
+  &__card {
+    padding: 30px;
+    position: relative;
+
+    .card__content {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50px;
+        top: 70px;
+        background-position: top;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &:nth-child(1) {
+      @include card(auto, 3);
+      @include pseudoBadgeDiscound('-9 000');
+
+      .card__content {
+        &::before {
+          width: 193px;
+          height: 210px;
+          background-image: url(../img/X-24.png);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      @include card(auto, 6);
+      @include pseudoBadgeDiscound('-10 000');
+
+      .card__content {
+        &::before {
+          width: 450px;
+          height: 245px;
+          left: 91px;
+          top: 37px;
+          background-image: url(../img/z-44.png);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 30px;
+          bottom: 30px;
+          width: 230px;
+          height: 107px;
+          background-image: url(../img/scheme.png);
+          background-position: top;
+          background-repeat: no-repeat;
+        }
+      }
+
+    }
+
+    &:nth-child(3) {
+      @include card(auto, 3);
+      @include pseudoBadgeDiscound('-600');
+
+      .card__content {
+        &::before {
+          width: 149px;
+          height: 218px;
+          left: 75px;
+          top: 64px;
+          background-image: url(../img/Quartz-23.png);
+        }
+      }
+
+      .card__btn {
+        padding: 16px 34px;
+      }
+
+    }
+
+    &:nth-child(n+4) {
+      @include card(auto, 3);
+      display: none;
+    }
+
+    &:nth-child(4) {
+      @include pseudoBadgeDiscound('-300');
+
+      .card__content {
+        &::before {
+          width: 117px;
+          height: 210px;
+          left: 89px;
+          top: 71px;
+          background-image: url(../img/Dear\ 1.png);
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      @include pseudoBadgeDiscound('-10 000');
+
+      .card__content {
+        &::before {
+          width: 254px;
+          height: 123px;
+          left: 21px;
+          top: 119px;
+          background-image: url(../img/Z-85.png);
+        }
+      }
+    }
+
+    &:nth-child(6) {
+      @include pseudoBadgeDiscound('-700');
+
+      .card__content {
+        &::before {
+          width: 183px;
+          height: 218px;
+          left: 56px;
+          top: 63px;
+          background-image: url(../img/H-18.png);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1410px) {
+  .container--offer {
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+
+  .offer {
+
+    &__card {
+      &:nth-child(2) {
+        @include card(auto, 3);
+
+        .card__content {
+          &::after {
+            display: none;
+          }
+
+          &::before {
+            left: 22px;
+            top: 112px;
+            width: 254px;
+            height: 138px;
+            background-image: url(../img/z-44_small.png);
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .offer {
+
+    &__card {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container--offer {
+    padding-top: 40px;
+  }
+
+  .offer {
+    &__card:nth-child(n) {
+      grid-column: auto / span 6;
+
+      &:nth-child(n+3) {
+        display: flex;
+      }
+
+      .card__header {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

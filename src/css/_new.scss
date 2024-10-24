@@ -1,0 +1,88 @@
+.container--new {
+  padding-top: 155px;
+  padding-bottom: 150px;
+}
+
+.new {
+  background-image: url('../img/new_back-desk.png');
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &__content {
+    margin-bottom: 47px;
+  }
+
+  &__header {
+    font-family: 'Playfair Display';
+    color: $decorColorGold;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 72px;
+  }
+
+  &__text {
+    color: white;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+  }
+
+  &__btn {
+    @include btnFilled;
+    padding: 19px 29px;
+  }
+
+  @media (max-width: 1410px) {
+    & {
+      background-image: url('../img/new_back-1024.png');
+    }
+  }
+}
+
+
+
+@media (max-width: 1000px) {
+
+  .new {
+    background-image: url('../img/new_back-768.png');
+  }
+
+  .container--new {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container--new {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 18px 12px;
+  }
+
+  .new {
+    height: 320px;
+    background-image: url(../img/new_back-320.png);
+    background-size: contain;
+    background-position: top;
+
+    &__header {
+      padding-top: 13px;
+      font-size: 24px;
+      font-weight: 900;
+      line-height: 29px;
+    }
+
+    &__text {
+      font-size: 16px;
+      font-weight: 200;
+      line-height: 18px;
+    }
+
+    &__btn {
+      max-width: 100%;
+    }
+  }
+}

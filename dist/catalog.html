@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SitDownPls</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="img/favi.png" type="image/x-icon">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container container--header">
+      <div class="header__back"></div>
+      <a href="tel:+7 (495) 885-45-47" class="header__link link--phone">
+        <svg class="link--phone-badge">
+          <use xlink:href="img/sprite.svg#mdi_call"></use>
+        </svg>
+        +7 (495) 885-45-47
+      </a>
+      <nav class="header__nav-top nav">
+        <ul class="nav__list">
+          <li class="nav__item-top">
+            <a href="#" class="nav__link-top">О компании</a>
+          </li>
+          <li class="nav__item-top">
+            <a href="#" class="nav__link-top">Гарантия и возврат</a>
+          </li>
+          <li class="nav__item-top">
+            <a href="#" class="nav__link-top">Корпоративным клиентам</a>
+          </li>
+          <li class="nav__item-top">
+            <a href="#" class="nav__link-top">Дизайн-решение</a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="header__link link--logo">
+        <img class="header__logo" src="img/logo.png" alt="лого">
+      </a>
+      <nav class="header__nav-bottom nav">
+        <ul class="nav__list">
+          <li class="nav__item-bottom">
+            <a href="#" class="nav__link-bottom">Каталог</a>
+          </li>
+          <li class="nav__item-bottom">
+            <a href="#" class="nav__link-bottom">Магазины</a>
+          </li>
+          <li class="nav__item-bottom">
+            <a href="#" class="nav__link-bottom">Шоу-рум</a>
+          </li>
+          <li class="nav__item-bottom">
+            <a href="#" class="nav__link-bottom">Доставка и оплата</a>
+          </li>
+          <li class="nav__item-bottom">
+            <a href="#" class="nav__link-bottom">Дисконт</a>
+          </li>
+          <li class="nav__item-bottom">
+            <a href="#" class="nav__link-bottom">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+      <form class="header__form form" method="get">
+        <svg class="form__badge">
+          <use xlink:href="img/sprite.svg#search"></use>
+        </svg>
+        <input type="text" class="form__input input--text" placeholder="Я хочу купить...">
+        <button class="form__btn btn" type="submit">
+          <svg class="btn__badge">
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+        </button>
+      </form>
+      <div class="header__account account">
+        <button class="account__btn btn--acc" type="button">
+          <svg class="account__badge">
+            <use xlink:href="img/sprite.svg#acc"></use>
+          </svg>
+        </button>
+        <button class="account__btn btn--cart" type="button">
+          <div class="btn--cart__counter">0</div>
+          <svg class="account__badge">
+            <use xlink:href="img/sprite.svg#cart"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="breadcrumps">
+        <ul class="breadcrumps__list">
+          <li class="breadcrumps__item">
+            <a href="#" class="breadcrumps__link">
+              Главная
+            </a>
+          </li>
+          <li class="breadcrumps__item">
+            <a href="#" class="breadcrumps__link">
+              Каталог
+            </a>
+          </li>
+          <li class="breadcrumps__item">
+            <a href="#" class="breadcrumps__link">
+              Диваны
+            </a>
+          </li>
+          <li class="breadcrumps__item">
+            <a href="#" class="breadcrumps__link link--active">
+              Прямые диваны
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="catalog">
+    <div class="container container--catalog">
+      <div class="catalog__grid">
+        <div class="filters">
+          <p class="filters__header">Фильтровать по:</p>
+          <form class="filters__form" action="#" method="get">
+            <ul class="filters__wrapper category">
+              <p class="category__header">Цвет</p>
+              <li class="category__item">
+                <input type="checkbox" class="category__input input--checkbox" name="brown" id="brown" />
+                <label class="category__label" for="brown">Коричневый
+                </label>
+              </li>
+              <li class="category__item">
+                <input type="checkbox" class="category__input input--checkbox" name="black" id="black" />
+                <label class="category__label" for="black">Черный
+                </label>
+              </li>
+              <li class="category__item">
+                <input type="checkbox" class="category__input input--checkbox" name="blue" id="blue" />
+                <label class="category__label" for="blue">Синий
+                </label>
+              </li>
+              <li class="category__item">
+                <input type="checkbox" class="category__input input--checkbox" name="white" id="white" />
+                <label class="category__label" for="white">Белый
+                </label>
+              </li>
+            </ul>
+            <ul class="filters__wrapper category">
+              <p class="category__header">Категория</p>
+              <li class="category__item">
+                <input type="checkbox" class="category__input input--checkbox" name="brown" id="sofa" />
+                <label class="category__label" for="sofa">Диваны
+                </label>
+              </li>
+              <li class="category__item">
+                <input type="checkbox" class="category__input input--checkbox" name="black" id="armchair" />
+                <label class="category__label" for="armchair">Кресла
+                </label>
+              </li>
+            </ul>
+            <ul class="filters__wrapper price">
+              <p class="price__header">Цена</p>
+              <div class="price__wrapper">
+                <div class="price__text">от</div>
+                <input type="text" class="price__input price--min" value="2000" />
+                <div class="price__text">до</div>
+                <input type="text" class="price__input price--max" value="150 000" />
+              </div>
+            </ul>
+          </form>
+        </div>
+        <article class="banner">
+          <h2 class="banner__header">Оксфорд 1950</h2>
+          <p class="banner__text">
+            Новая коллекция <br> изысканных кресел
+          </p>
+          <a class="banner__link link">
+            В каталог
+            <svg class="banner__link-badge">
+              <use xlink:href="img/sprite.svg#arrow"></use>
+            </svg>
+          </a>
+        </article>
+        <h3 class="catalog__header">Каталог</h3>
+        <div class="goods">
+          <div class="goods__grid grid">
+            <div class="goods__item card">
+              <h4 class="card__header">Диван кожаный
+                <div>
+                  “R-94”
+                </div>
+              </h4>
+              <p class="card__price--purchase">94 990 руб</p>
+              <button class="card__btn btn">Купить</button>
+            </div>
+            <div class="goods__item card">
+              <h4 class="card__header">Диван апартековый
+                <div>
+                  “T-75”
+                </div>
+              </h4>
+              <p class="card__price--purchase">69 990 руб</p>
+              <button class="card__btn btn">Купить</button>
+            </div>
+            <div class="goods__item card">
+              <h4 class="card__header">Диван тканевый
+                <div>
+                  “D-31”
+                </div>
+              </h4>
+              <p class="card__price--purchase">28 490 руб</p>
+              <button class="card__btn btn">Купить</button>
+            </div>
+            <div class="goods__item card">
+              <h4 class="card__header">Диван велюровый
+                <div>
+                  “Y-68”
+                </div>
+              </h4>
+              <p class="card__price--purchase">22 990 руб</p>
+              <button class="card__btn btn">Купить</button>
+            </div>
+            <div class="goods__item card">
+              <h4 class="card__header">Диван из шинила
+                <div>
+                  “W-95”
+                </div>
+              </h4>
+              <p class="card__price--purchase">22 990 руб</p>
+              <button class="card__btn btn">Купить</button>
+            </div>
+            <div class="goods__item card">
+              <h4 class="card__header">Диван флоковый
+                <div>
+                  “G-41”
+                </div>
+              </h4>
+              <p class="card__price--purchase">17 990 руб</p>
+              <button class="card__btn btn">Купить</button>
+            </div>
+            <div class="goods__item card">
+              <h4 class="card__header">Диван шиниловый
+                <div>
+                  “V-43”
+                </div>
+              </h4>
+              <p class="card__price--purchase">19 990 руб</p>
+              <button class="card__btn btn">Купить</button>
+            </div>
+            <div class="goods__item card">
+              <h4 class="card__header">Диван велюровый
+                <div>
+                  “S-99”
+                </div>
+              </h4>
+              <p class="card__price--purchase">19 990 руб</p>
+              <button class="card__btn btn">Купить</button>
+            </div>
+            <div class="goods__item card">
+              <h4 class="card__header">Диван из кожзама
+                <div>
+                  “F-85”
+                </div>
+              </h4>
+              <p class="card__price--purchase">26 990 руб</p>
+              <button class="card__btn btn">Купить</button>
+            </div>
+          </div>
+          <div class="goods__pagination pagination">
+            <button class="pagination__btn btn--active">1</button>
+            <button class="pagination__btn">2</button>
+            <button class="pagination__btn">3</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container container--footer">
+      <div class="footer__wrapper">
+        <a href="#" class="footer__link link--logo">
+          <img class="footer__logo" src="img/logo.png" alt="лого">
+          <div class="footer__socials socials">
+            <a href="ok.ru" class="socials__link">
+              <svg class="socials__badge-ok">
+                <use xlink:href="img/sprite.svg#ok"></use>
+              </svg>
+            </a>
+            <a href="vk.ru" class="socials__link">
+              <svg class="socials__badge-vk">
+                <use xlink:href="img/sprite.svg#vk"></use>
+              </svg>
+            </a>
+          </div>
+        </a>
+      </div>
+      <nav class="footer__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item-footer">
+            <a href="#" class="nav__link-footer link--header">О нас</a>
+            <a href="#" class="nav__link-footer">О компании</a>
+            <a href="#" class="nav__link-footer">Блог</a>
+          </li>
+          <li class="nav__item-footer">
+            <a href="#" class="nav__link-footer link--header">Услуги</a>
+            <a href="#" class="nav__link-footer">Доставка</a>
+            <a href="#" class="nav__link-footer">Рассрочка и кредит</a>
+            <a href="#" class="nav__link-footer">Сборка и установка</a>
+          </li>
+          <li class="nav__item-footer">
+            <a href="#" class="nav__link-footer link--header">Связь с нами</a>
+            <a href="#" class="nav__link-footer">Обратная связь</a>
+            <a href="#" class="nav__link-footer">Контакты</a>
+          </li>
+          <li class="nav__item-footer">
+            <a href="#" class="nav__link-footer link--header">Сотрудничество</a>
+            <a href="#" class="nav__link-footer">Поставщикам</a>
+            <a href="#" class="nav__link-footer">Оптовикам</a>
+            <a href="#" class="nav__link-footer">Карьера</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+    <div class="copyright">SDP® 2011-2021</div>
+  </footer>
+
+</body>
+
+</html>

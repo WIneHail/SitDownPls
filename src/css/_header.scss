@@ -1,0 +1,418 @@
+.container--header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: unset;
+}
+
+.header {
+  position: relative;
+
+  &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: $backgColGray;
+  }
+
+  &__nav-top {
+    z-index: 1;
+  }
+
+  &__nav-bottom {
+    padding-top: 4px;
+    padding-right: 3px;
+  }
+
+  &__link {
+    margin-bottom: 45px;
+  }
+
+  &__account {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 2px;
+  }
+}
+
+.form {
+  position: relative;
+  margin-bottom: 10px;
+
+  @media (hover:hover) {
+    &:hover &__input {
+      background-color: $backgColGrayBlack;
+    }
+  }
+
+  &:active &__input {
+    background-color: $backgColGray;
+    border-color: transparent;
+  }
+
+  &:active &__badge {
+    color: $decorColPurple;
+  }
+
+
+  &__badge {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    top: 19px;
+    left: 33px;
+    color: $fontColGray;
+  }
+
+  &__input {
+    position: relative;
+    width: 1061px;
+    padding: 19px 25px 19px 58px;
+    border-radius: 10px;
+    outline: none;
+    background-color: $backgColGray;
+    border: 2px solid transparent;
+
+    &:focus {
+      background-color: #F8EFFF;
+      border-color: $decorColPurple;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    right: 31px;
+    top: 12px;
+    color: transparent;
+    transition:
+      background-color .3s ease-in-out,
+      color .3s ease-in-out,
+      border .3s ease-in-out;
+
+    @media (hover:hover) {
+      &:hover {
+        color: $colorBlackPurp;
+      }
+    }
+  }
+}
+
+
+.link {
+  &--phone {
+    display: flex;
+    align-items: center;
+    margin-right: 350px;
+    z-index: 1;
+    @include linkSvgBadge();
+    font-size: 14px;
+
+
+    &-badge {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  &--logo {
+    margin-bottom: 30px;
+  }
+
+}
+
+
+.nav {
+  margin-bottom: 13px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item-top:not(:last-child) {
+    margin-right: 65px;
+  }
+
+  &__link-top {
+    @include link(14px, 14px, $fontColGray)
+  }
+
+  &__item-bottom:not(:last-child) {
+    margin-right: 92px;
+  }
+
+  &__link-bottom {
+    @include link(16px, 22px, $fontColBlack)
+  }
+}
+
+.wrapper--top {
+  position: relative;
+  z-index: 1;
+  padding: 16px 0;
+}
+
+.wrapper--bottom {
+  flex-direction: column;
+}
+
+.account {
+  &__btn {
+    @include btnSvgBadge;
+  }
+
+  &__btn:not(:last-child) {
+    margin-right: 23px;
+  }
+}
+
+.btn--acc {
+  width: 28px;
+  height: 29px;
+}
+
+.btn--cart {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 49px;
+  height: 34px;
+
+  &__counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+    width: 14px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $decorColOrange;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 10px;
+    color: white;
+  }
+
+  .account__badge {
+    width: 30px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 1410px) {
+
+  .container--header {
+    padding-top: 18px;
+    padding-bottom: 21px;
+  }
+
+  .header {
+
+    .link--logo {
+      order: 1;
+      margin-bottom: 30px;
+    }
+
+    .link--phone {
+      margin-bottom: 22px;
+    }
+
+    &__nav-bottom {
+      order: 1;
+      padding-top: 2px;
+    }
+
+    &__nav-top {
+      margin-bottom: 50px;
+      padding-top: 11px;
+    }
+
+    &__form {
+      order: 1;
+    }
+
+    &__back {
+      top: 58px;
+    }
+
+    &__account {
+      z-index: 1;
+      margin-bottom: 35px;
+    }
+
+  }
+
+  .form {
+    &__input {
+      width: 732px;
+    }
+  }
+
+  .nav {
+
+    &__item-top:not(:last-child) {
+      margin-right: 64px;
+    }
+
+    &__item-bottom:not(:last-child) {
+      margin-right: 41px;
+    }
+  }
+
+
+}
+
+@media (max-width: 1000px) {
+  .container--header {
+    padding-bottom: 20px;
+  }
+
+  .header {
+
+    .link--logo {
+      order: 0;
+      padding-top: 9px;
+      margin-left: -4px;
+      margin-bottom: 25px;
+    }
+
+    &__account {
+      margin-bottom: 21px;
+    }
+
+    &__nav-top {
+      margin-bottom: 42px;
+    }
+
+    &__nav-bottom {
+      margin-left: -4px;
+      margin-right: -8px;
+      margin-bottom: 37px;
+    }
+
+    &__input {
+      padding-left: 54px;
+    }
+
+  }
+
+  .form {
+    &__input {
+      width: 627px;
+    }
+  }
+
+  .nav {
+
+    &__item-bottom {
+
+      &:not(:last-child) {
+        margin-right: 40px;
+      }
+
+      &:nth-child(1) {
+        margin-right: 41px;
+      }
+
+      &:nth-child(4) {
+        margin-right: 41px;
+      }
+    }
+
+    &__link-bottom {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 19px;
+    }
+
+    &__item-top:not(:last-child) {
+      margin-right: 35px;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .container--header {
+    padding-top: 12px;
+    padding-bottom: 21px;
+    justify-content: center;
+  }
+
+  .header {
+
+    &__back {
+      top: 0;
+    }
+
+    .link--logo {
+      z-index: 2;
+      margin-left: unset;
+      margin-bottom: 32px;
+      padding-top: unset;
+    }
+
+    .link--phone {
+      margin-bottom: unset;
+      margin-right: 53px;
+      margin-bottom: 16px;
+      order: 1;
+    }
+
+    &__nav-top {
+      display: none;
+    }
+
+    &__account {
+      order: 1;
+      margin-bottom: 16px;
+    }
+
+    &__form {
+      order: 2;
+      margin-bottom: unset;
+    }
+
+    &__nav-bottom {
+      order: 2;
+      padding: 5px 4px 3px;
+      overflow-x: auto;
+      margin-bottom: 16px;
+    }
+  }
+
+  .form {
+    &__input {
+      max-width: 296px;
+      padding-left: 58px;
+    }
+  }
+
+  .nav {
+    &__item-bottom {
+      white-space: nowrap;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      &:nth-child(1) {
+        margin-right: 31px;
+      }
+
+      &:nth-child(4) {
+        margin-right: 41px;
+      }
+    }
+  }
+}

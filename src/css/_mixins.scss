@@ -1,0 +1,248 @@
+@mixin link ($size, $height, $color) {
+  font-weight: 400;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+  transition: color .3s ease-in-out,
+    background-color .3s ease-in-out;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $decorColPurple;
+    }
+  }
+
+  &:focus {
+    color: $colorBlackPurp;
+    background-color: $colorPalePink;
+  }
+
+  &:active {
+    background-color: unset;
+  }
+}
+
+@mixin linkWithArrow ($size, $height, $color) {
+  border: 2px solid transparent;
+  font-weight: 700;
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+  transition: color .3s ease-in-out,
+    background-color .3s ease-in-out;
+
+  @media (hover: hover) {
+    &:hover {
+      color: $decorColPurple;
+      border-bottom: 2px solid $decorColPurple;
+    }
+  }
+
+  &:focus {
+    color: $colorBlackPurp;
+    border-bottom: 2px solid $decorColPurple;
+    background-color: $colorPalePink;
+  }
+
+  &:active {
+    color: $colorBlackPurp;
+    border-bottom: 2px solid $colorBlackPurp;
+  }
+}
+
+@mixin linkSvgBadge {
+  transition:
+    color .3s ease-in-out,
+    background-color .3s ease-in-out;
+  color: $decorColOrange;
+  outline: none;
+
+  @media (hover:hover) {
+    &:hover {
+      color: $colorPaleOrange;
+    }
+  }
+
+  &:focus {
+    color: $decorColOrange;
+    background-color: $colorPaleOrange;
+  }
+
+  &:active {
+    color: $colorBlackOrange;
+    background-color: transparent;
+  }
+}
+
+@mixin btnSvgBadge {
+  transition:
+    color .3s ease-in-out,
+    background-color .3s ease-in-out;
+  color: $decorColPurple;
+  outline: transparent;
+
+  @media (hover:hover) {
+    &:hover {
+      color: $colorPalePurp;
+    }
+  }
+
+  &:focus {
+    color: white;
+    background-color: $colorPalePurp;
+  }
+
+  &:active {
+    color: $colorBlackPurp;
+    background-color: transparent;
+  }
+}
+
+@mixin btnFilled {
+  padding: 19px 47px;
+  color: white;
+  background-color: $decorColPurple;
+  max-width: max-content;
+  border: 3px solid $decorColPurple;
+  border-radius: 10px;
+  transition:
+    background-color .3s ease-in-out,
+    color .3s ease-in-out,
+    border .3s ease-in-out;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+
+  @media (hover:hover) {
+    &:hover {
+      background-color: $colorPalePurp;
+    }
+  }
+
+
+  &:focus {
+    background-color: $colorPalePurp;
+    border: 3px solid $colorBlackPurp;
+  }
+
+  &:active {
+    background-color: $colorBlackPurp;
+    border: 3px solid $colorBlackPurp;
+  }
+
+  &:disabled {
+    border: 3px solid $backgColGrayBlack;
+    background-color: $backgColGrayBlack;
+    color: $fontColGray;
+  }
+}
+
+@mixin btnTransparent {
+  padding: 19px 47px;
+  color: $decorColPurple;
+  background-color: transparent;
+  max-width: max-content;
+  border: 2px solid $decorColPurple;
+  border-radius: 10px;
+  transition:
+    background-color .3s ease-in-out,
+    border .3s ease-in-out;
+  outline: none;
+
+  @media (hover:hover) {
+    &:hover {
+      color: white;
+      background-color: $decorColPurple;
+    }
+  }
+
+
+  &:focus {
+    color: white;
+    background-color: $colorPalePurp;
+  }
+
+  &:active {
+    background-color: $colorBlackPurp;
+    border: 3px solid $colorBlackPurp;
+  }
+}
+
+@mixin card($colums, $span) {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  grid-column: #{$colums} / span #{$span};
+  background-color: $backgColGray;
+}
+
+@mixin pseudoBadgeDiscound($text) {
+  &::after {
+    content: $text;
+    position: absolute;
+    top: 31px;
+    left: 0;
+    background-color: $decorColOrange;
+    padding: 7px 0;
+    width: 83px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: white;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 72px;
+    background-color: $decorColOrange;
+    width: 23px;
+    height: 23px;
+    transform: rotate(45deg);
+  }
+}
+
+@mixin cardBadgeStar($content) {
+  &::after {
+    content: $content;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 45px;
+    background-image: url(../img/star.svg);
+    background-repeat: no-repeat;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: $decorColOrange;
+    text-align: right;
+  }
+}
+
+@mixin socialsSvgBadge {
+  transition:
+    color .3s ease-in-out,
+    background-color .3s ease-in-out;
+  color: $fontColGray;
+  outline: none;
+
+  @media (hover:hover) {
+    &:hover {
+      color: $decorColPurple;
+    }
+  }
+
+  &:focus {
+    color: $backgColGrayBlack;
+    background-color: $colorPalePurp;
+  }
+
+  &:active {
+    color: $colorBlackPurp;
+    background-color: transparent;
+  }
+}
