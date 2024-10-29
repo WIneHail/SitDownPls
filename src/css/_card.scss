@@ -7,6 +7,10 @@
     font-size: 24px;
     line-height: 31px;
     color: $fontColBlack;
+
+    & span {
+      display: inline-block;
+    }
   }
 
   &__prices {
@@ -14,7 +18,7 @@
     margin-bottom: 23px;
   }
 
-  &__price--purchase {
+  &__prices-purchase {
     font-size: 18px;
     font-weight: 400;
     line-height: 23px;
@@ -23,13 +27,19 @@
     color: $decorColOrange;
   }
 
-  &__price--retail {
+  &__prices-retail {
     font-size: 16px;
     font-weight: 400;
     line-height: 21px;
     display: inline;
     color: $fontColGray;
     text-decoration: line-through;
+  }
+
+  &__prices-full {
+    margin-bottom: 23px;
+    font-size: 16px;
+    color: $fontColGray;
   }
 
   &__btn {
@@ -53,8 +63,12 @@
     }
   }
 
-  &__badge {
+  &__link-header {
     display: none;
+  }
+
+  &__badge {
+    fill: none;
     width: 24px;
     height: 24px;
   }
@@ -63,12 +77,6 @@
     display: inline-block;
     position: relative;
     @include linkWithArrow(16px, 19px, $decorColPurple);
-
-    @media (hover:hover) {
-      &:hover {
-        color: $colorBlackPurp;
-      }
-    }
 
     .link__badge {
       position: absolute;

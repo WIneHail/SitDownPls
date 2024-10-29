@@ -84,8 +84,8 @@
   }
 
   &__link {
+    @include link (14px, 19px, $decorColPurple);
     text-decoration: underline;
-    color: $decorColPurple;
   }
 }
 

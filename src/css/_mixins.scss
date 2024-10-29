@@ -31,22 +31,112 @@
   transition: color .3s ease-in-out,
     background-color .3s ease-in-out;
 
+  & path,
+  & circle {
+    transition:
+      stroke .3s ease-in-out,
+      fill .3s ease-in-out;
+  }
+
   @media (hover: hover) {
     &:hover {
-      color: $decorColPurple;
-      border-bottom: 2px solid $decorColPurple;
+      & {
+        color: $decorColPurple;
+        border-bottom: 2px solid $decorColPurple;
+      }
+
+      & path {
+        stroke: white;
+      }
+
+      & circle {
+        fill: $decorColPurple;
+      }
+
     }
   }
 
   &:focus {
-    color: $colorBlackPurp;
+    color: $decorColPurple;
     border-bottom: 2px solid $decorColPurple;
-    background-color: $colorPalePink;
+
+    & path {
+      stroke: white;
+    }
+
+    & circle {
+      fill: $colorPalePurp;
+      stroke: $decorColPurple;
+    }
   }
 
   &:active {
     color: $colorBlackPurp;
     border-bottom: 2px solid $colorBlackPurp;
+
+    & path {
+      stroke: white;
+    }
+
+    & circle {
+      fill: $colorBlackPurp;
+      stroke: $colorBlackPurp;
+    }
+  }
+}
+
+@mixin animationSvgArrow {
+
+  & path,
+  & circle {
+    transition:
+      stroke .3s ease-in-out,
+      fill .3s ease-in-out;
+  }
+
+  @media (hover:hover) {
+    &:hover {
+      & path {
+        stroke: white;
+      }
+
+      & circle {
+        fill: $decorColPurple;
+      }
+    }
+  }
+
+  &:focus {
+    & path {
+      stroke: white;
+    }
+
+    & circle {
+      fill: $colorPalePurp;
+      stroke: $decorColPurple;
+    }
+  }
+
+  &:active {
+    & path {
+      stroke: white;
+    }
+
+    & circle {
+      fill: $colorBlackPurp;
+      stroke: $colorBlackPurp;
+    }
+  }
+
+  &:disabled {
+    & path {
+      stroke: $fontColGray;
+    }
+
+    & circle {
+      fill: transparent;
+      stroke: $fontColGray;
+    }
   }
 }
 

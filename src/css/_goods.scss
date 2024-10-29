@@ -23,12 +23,6 @@
       background-repeat: no-repeat;
     }
 
-    .card__price--purchase {
-      margin-bottom: 23px;
-      font-size: 16px;
-      color: $fontColGray;
-    }
-
     &:nth-child(1) {
       @include cardBadgeStar('5.0');
 

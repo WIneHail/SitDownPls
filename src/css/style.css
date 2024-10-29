@@ -630,12 +630,39 @@ input {
   right: 31px;
   top: 12px;
   color: transparent;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border 0.3s ease-in-out;
+  outline: none;
+}
+.form__btn path, .form__btn circle {
+  transition: stroke 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
 @media (hover: hover) {
-  .form__btn:hover {
-    color: #7033AC;
+  .form__btn:hover path {
+    stroke: white;
   }
+  .form__btn:hover circle {
+    fill: #A65CF0;
+  }
+}
+.form__btn:focus path {
+  stroke: white;
+}
+.form__btn:focus circle {
+  fill: #C998FB;
+  stroke: #A65CF0;
+}
+.form__btn:active path {
+  stroke: white;
+}
+.form__btn:active circle {
+  fill: #7033AC;
+  stroke: #7033AC;
+}
+.form__btn:disabled path {
+  stroke: #999999;
+}
+.form__btn:disabled circle {
+  fill: transparent;
+  stroke: #999999;
 }
 
 .link--phone {
@@ -661,7 +688,7 @@ input {
   color: #BB370E;
   background-color: transparent;
 }
-.link--phone-badge {
+.link--phone__badge {
   width: 22px;
   height: 22px;
 }
@@ -1503,8 +1530,16 @@ input {
   grid-template-rows: 511px 405px;
   gap: 33px;
 }
+.top .card__link {
+  width: 85px;
+}
+.top .card__link .card__badge {
+  position: absolute;
+  top: -3px;
+  right: -26px;
+}
 .top__item {
-  padding: 30px;
+  padding: 30px 30px 28px;
 }
 .top__item::before {
   content: "";
@@ -1745,17 +1780,40 @@ input {
     font-size: 16px;
     line-height: 19px;
     color: transparent;
-    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  .top .card__link-header path, .top .card__link-header circle {
+    transition: stroke 0.3s ease-in-out, fill 0.3s ease-in-out;
   }
 }
 @media (max-width: 767px) and (hover: hover) {
-  .top .card__link-header:hover {
-    color: #7033AC;
+  .top .card__link-header:hover path {
+    stroke: white;
+  }
+  .top .card__link-header:hover circle {
+    fill: #A65CF0;
   }
 }
 @media (max-width: 767px) {
-  .top .card__link-header:focus {
-    color: #C998FB;
+  .top .card__link-header:focus path {
+    stroke: white;
+  }
+  .top .card__link-header:focus circle {
+    fill: #C998FB;
+    stroke: #A65CF0;
+  }
+  .top .card__link-header:active path {
+    stroke: white;
+  }
+  .top .card__link-header:active circle {
+    fill: #7033AC;
+    stroke: #7033AC;
+  }
+  .top .card__link-header:disabled path {
+    stroke: #999999;
+  }
+  .top .card__link-header:disabled circle {
+    fill: transparent;
+    stroke: #999999;
   }
 }
 .container--articles {
@@ -1994,8 +2052,24 @@ input {
   line-height: 19px;
 }
 .feedback__link {
-  text-decoration: underline;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
   color: #A65CF0;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  text-decoration: underline;
+}
+@media (hover: hover) {
+  .feedback__link:hover {
+    color: #A65CF0;
+  }
+}
+.feedback__link:focus {
+  color: #7033AC;
+  background-color: #EBD1FF;
+}
+.feedback__link:active {
+  background-color: unset;
 }
 
 @media (max-width: 1410px) {
@@ -2243,11 +2317,6 @@ input {
   background-position: top;
   background-repeat: no-repeat;
 }
-.goods__item .card__price--purchase {
-  margin-bottom: 23px;
-  font-size: 16px;
-  color: #999999;
-}
 .goods__item:nth-child(1)::after {
   content: "5.0";
   position: absolute;
@@ -2426,11 +2495,14 @@ input {
   line-height: 31px;
   color: #333333;
 }
+.card__header span {
+  display: inline-block;
+}
 .card__prices {
   display: flex;
   margin-bottom: 23px;
 }
-.card__price--purchase {
+.card__prices-purchase {
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
@@ -2438,13 +2510,18 @@ input {
   margin-right: 30px;
   color: #FF862F;
 }
-.card__price--retail {
+.card__prices-retail {
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   display: inline;
   color: #999999;
   text-decoration: line-through;
+}
+.card__prices-full {
+  margin-bottom: 23px;
+  font-size: 16px;
+  color: #999999;
 }
 .card__btn {
   font-weight: 600;
@@ -2501,8 +2578,11 @@ input {
 .card__tags .tags__link:not(:last-child) {
   margin-right: 30px;
 }
-.card__badge {
+.card__link-header {
   display: none;
+}
+.card__badge {
+  fill: none;
   width: 24px;
   height: 24px;
 }
@@ -2516,25 +2596,42 @@ input {
   color: #A65CF0;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
+.card__link path, .card__link circle {
+  transition: stroke 0.3s ease-in-out, fill 0.3s ease-in-out;
+}
 @media (hover: hover) {
   .card__link:hover {
     color: #A65CF0;
     border-bottom: 2px solid #A65CF0;
   }
+  .card__link:hover path {
+    stroke: white;
+  }
+  .card__link:hover circle {
+    fill: #A65CF0;
+  }
 }
 .card__link:focus {
-  color: #7033AC;
+  color: #A65CF0;
   border-bottom: 2px solid #A65CF0;
-  background-color: #EBD1FF;
+}
+.card__link:focus path {
+  stroke: white;
+}
+.card__link:focus circle {
+  fill: #C998FB;
+  stroke: #A65CF0;
 }
 .card__link:active {
   color: #7033AC;
   border-bottom: 2px solid #7033AC;
 }
-@media (hover: hover) {
-  .card__link:hover {
-    color: #7033AC;
-  }
+.card__link:active path {
+  stroke: white;
+}
+.card__link:active circle {
+  fill: #7033AC;
+  stroke: #7033AC;
 }
 .card__link .link__badge {
   position: absolute;
