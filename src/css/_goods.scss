@@ -4,13 +4,14 @@
   }
 
 
-  &__grid {
-    grid-auto-rows: 420px;
-  }
+  // &__grid {
+  //   grid-auto-rows: 420px;
+  // }
 
   &__item {
     @include card(auto, 3);
     padding: 30px 7px 30px 30px;
+    min-height: 420px;
 
     &::before {
       content: "";

@@ -9,12 +9,12 @@
   }
 
   &__grid {
-    grid-template-rows: 511px 405px;
+    // grid-template-rows: 511px 405px;
     gap: 33px;
   }
 
   .card__link {
-    width: 85px;
+    max-width: max-content;
 
     .card__badge {
       position: absolute;
@@ -37,6 +37,7 @@
     &:nth-child(1) {
       @include card(auto, 6);
       justify-content: space-between;
+      min-height: 511px;
 
       &::before {
         width: 515px;
@@ -48,6 +49,7 @@
     &:nth-child(2) {
       @include card(auto, 6);
       justify-content: space-between;
+      min-height: 511px;
 
       &::before {
         width: 515px;
@@ -59,7 +61,7 @@
     &:nth-child(3) {
       @include card(auto, 4);
       justify-content: space-between;
-      max-height: 405px;
+      min-height: 405px;
 
       &::before {
         width: 350px;
@@ -71,7 +73,7 @@
     &:nth-child(4) {
       @include card(auto, 4);
       justify-content: space-between;
-      max-height: 405px;
+      min-height: 405px;
 
       .card__tags {
         .tags__link:not(:last-child) {
@@ -89,7 +91,7 @@
     &:nth-child(5) {
       @include card(auto, 4);
       justify-content: space-between;
-      max-height: 405px;
+      min-height: 405px;
 
       .card__tags {
         .tags__link:not(:last-child) {
@@ -111,17 +113,17 @@
   .top {
 
     &__grid {
-      grid-template-rows: 511px 511px;
+      // grid-template-rows: 511px 511px;
       gap: 32px;
     }
 
     &__item {
-      padding: 30px 29px 30px;
+      padding: 32px 29px 30px;
 
       &:nth-child(2) {
         order: 1;
         grid-column: auto / span 3;
-        justify-content: space-between;
+
         overflow: hidden;
 
         &::before {
@@ -135,8 +137,7 @@
 
       &:nth-child(3) {
         grid-column: auto / span 3;
-        max-height: unset;
-        justify-content: space-between;
+
         overflow: hidden;
 
         &::before {
@@ -149,8 +150,7 @@
 
       &:nth-child(4) {
         grid-column: auto / span 3;
-        justify-content: space-between;
-        max-height: unset;
+
 
         &::before {
           top: 127px;
@@ -182,13 +182,18 @@
   .top {
 
 
-    &__grid {
-      grid-auto-rows: 511px;
-    }
+    // &__grid {
+    //   grid-auto-rows: 511px;
+    // }
 
     &__item {
       &:nth-child(4) {
         order: 1;
+        min-height: 511px;
+      }
+
+      &:nth-child(5) {
+        min-height: 511px;
       }
     }
   }
@@ -203,8 +208,8 @@
   .top {
 
     &__grid {
-      grid-template-rows: 332px 206px 206px;
-      grid-auto-rows: 332px;
+      // grid-template-rows: 332px 206px 206px;
+      // grid-auto-rows: 332px;
       column-gap: 17px;
     }
 
@@ -225,6 +230,7 @@
       }
 
       &:nth-child(1) {
+        min-height: 332px;
 
 
         &::before {
@@ -237,7 +243,8 @@
 
 
       &:nth-child(n+2) {
-        padding: 16px 15px 16px;
+        padding: 19px 15px 16px;
+        min-height: 206px;
 
         .card__header {
           font-size: 16px;

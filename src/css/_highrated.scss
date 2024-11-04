@@ -17,7 +17,6 @@
 
   .highrated {
     .grid {
-      grid-auto-rows: 278px;
       gap: 16px;
     }
 
@@ -25,6 +24,7 @@
       &__item {
         grid-column: auto / span 3;
         padding: 13px 7px 18px 16px;
+        min-height: 278px;
 
         &:nth-child(n)::after {
           left: 16px;
@@ -84,8 +84,8 @@
             padding: 9px 23px;
           }
 
-          &__price--purchase {
-            margin-bottom: 15px;
+          &__prices-full {
+            margin-bottom: 16px;
           }
         }
       }

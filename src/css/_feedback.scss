@@ -84,7 +84,7 @@
   }
 
   &__link {
-    @include link (14px, 19px, $decorColPurple);
+    @include link (12px, 16.34px, $decorColPurple);
     text-decoration: underline;
   }
 }
@@ -130,6 +130,7 @@
 
 @media (max-width: 767px) {
   .container--feedback {
+
     &::before {
       display: none;
     }

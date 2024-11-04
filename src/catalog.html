@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SitDownPls</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="shortcut icon" href="img/favi.png" type="image/x-icon">
 </head>
 
@@ -169,21 +169,24 @@
           </form>
         </div>
         <article class="banner">
-          <h2 class="banner__header">Оксфорд 1950</h2>
-          <p class="banner__text">
-            Новая коллекция <br> изысканных кресел
-          </p>
-          <a class="banner__link link">
-            В каталог
-            <svg class="banner__link-badge">
-              <use xlink:href="img/sprite.svg#arrow"></use>
-            </svg>
-          </a>
+          <img class="banner__img" src="../img/oxford_catalog.png" alt="Диваны Оксфорд" aria-hidden="true">
+          <div class="banner__content">
+            <h2 class="banner__header">Оксфорд 1950</h2>
+            <p class="banner__text">
+              Новая коллекция <br> изысканных кресел
+            </p>
+            <a class="banner__link link">
+              В каталог
+              <svg class="banner__link-badge">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </a>
+          </div>
         </article>
         <h1 class="catalog__header">Каталог</h1>
         <div class="goods">
-          <div class="goods__grid grid">
-            <div class="goods__item card">
+          <ul class="goods__grid grid">
+            <li class="goods__item card">
               <h2 class="card__header">Диван кожаный
                 <span>
                   “R-94”
@@ -191,8 +194,8 @@
               </h2>
               <p class="card__prices-full">94 990 руб</p>
               <button class="card__btn btn">Купить</button>
-            </div>
-            <div class="goods__item card">
+            </li>
+            <li class="goods__item card">
               <h2 class="card__header">Диван апартековый
                 <span>
                   “T-75”
@@ -200,8 +203,8 @@
               </h2>
               <p class="card__prices-full">69 990 руб</p>
               <button class="card__btn btn">Купить</button>
-            </div>
-            <div class="goods__item card">
+            </li>
+            <li class="goods__item card">
               <h2 class="card__header">Диван тканевый
                 <span>
                   “D-31”
@@ -209,8 +212,8 @@
               </h2>
               <p class="card__prices-full">28 490 руб</p>
               <button class="card__btn btn">Купить</button>
-            </div>
-            <div class="goods__item card">
+            </li>
+            <li class="goods__item card">
               <h2 class="card__header">Диван велюровый
                 <span>
                   “Y-68”
@@ -218,8 +221,8 @@
               </h2>
               <p class="card__prices-full">22 990 руб</p>
               <button class="card__btn btn">Купить</button>
-            </div>
-            <div class="goods__item card">
+            </li>
+            <li class="goods__item card">
               <h2 class="card__header">Диван из шинила
                 <span>
                   “W-95”
@@ -227,8 +230,8 @@
               </h2>
               <p class="card__prices-full">22 990 руб</p>
               <button class="card__btn btn">Купить</button>
-            </div>
-            <div class="goods__item card">
+            </li>
+            <li class="goods__item card">
               <h2 class="card__header">Диван флоковый
                 <span>
                   “G-41”
@@ -236,8 +239,8 @@
               </h2>
               <p class="card__prices-full">17 990 руб</p>
               <button class="card__btn btn">Купить</button>
-            </div>
-            <div class="goods__item card">
+            </li>
+            <li class="goods__item card">
               <h2 class="card__header">Диван шиниловый
                 <span>
                   “V-43”
@@ -245,8 +248,8 @@
               </h2>
               <p class="card__prices-full">19 990 руб</p>
               <button class="card__btn btn">Купить</button>
-            </div>
-            <div class="goods__item card">
+            </li>
+            <li class="goods__item card">
               <h2 class="card__header">Диван велюровый
                 <span>
                   “S-99”
@@ -254,8 +257,8 @@
               </h2>
               <p class="card__prices-full">19 990 руб</p>
               <button class="card__btn btn">Купить</button>
-            </div>
-            <div class="goods__item card">
+            </li>
+            <li class="goods__item card">
               <h2 class="card__header">Диван из кожзама
                 <span>
                   “F-85”
@@ -263,8 +266,8 @@
               </h2>
               <p class="card__prices-full">26 990 руб</p>
               <button class="card__btn btn">Купить</button>
-            </div>
-          </div>
+            </li>
+          </ul>
           <div class="goods__pagination pagination">
             <button class="pagination__btn btn--active">1</button>
             <button class="pagination__btn">2</button>

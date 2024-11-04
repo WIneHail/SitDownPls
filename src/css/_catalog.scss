@@ -14,17 +14,27 @@
 
   &__grid {
     display: grid;
-    padding-top: 22px;
-    padding-bottom: 30px;
-    row-gap: 32px;
+    padding-top: 17px;
+    padding-bottom: 59px;
+    row-gap: 24px;
     column-gap: 32px;
     grid-template-columns: 296px repeat(3, 1fr);
-    grid-template-rows: 24px 572px 329px 360px 60px;
+    // grid-template-rows: minmax(24px, 300px) 572px 329px 360px 60px;
     grid-template-areas:
       "filters header header header"
       "filters goods goods goods"
       ". goods goods goods"
-      "banner goods goods goods";
+      ". goods goods goods"
+      ". goods goods goods"
+      ". goods goods goods"
+      ". goods goods goods"
+      ". goods goods goods"
+      ". goods goods goods"
+      ". goods goods goods"
+      ". goods goods goods"
+      ". goods goods goods"
+      "banner goods goods goods"
+      ". goods goods goods";
   }
 
   .filters {
@@ -90,6 +100,7 @@
 
       &__wrapper {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
       }
 
@@ -131,29 +142,36 @@
   .banner {
     grid-area: banner;
     display: flex;
+    min-height: 360px;
     flex-direction: column;
-    justify-content: end;
     position: relative;
-    padding: 31px;
     border-radius: 10px;
     background-color: $fontColBlack;
     background-image: none;
 
-    &::before {
-      position: absolute;
-      content: "";
-      display: block;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 190px;
-      background-image: url(../img/oxford_catalog.png);
-      background-position: top;
+    // &::before {
+    //   position: absolute;
+    //   content: "";
+    //   display: block;
+    //   top: 0;
+    //   left: 0;
+    //   right: 0;
+    //   height: 190px;
+    //   background-image: url(../img/oxford_catalog.png);
+    //   background-position: top;
+    // }
+
+    &__img {
+      width: 100%;
+    }
+
+    &__content {
+      padding: 27px 31px 31px;
     }
 
     &__header {
       color: $decorColorGold;
-      font-family: Playfair Display;
+      font-family: 'Playfair Display', 'serif';
       font-size: 24px;
       font-weight: 900;
       line-height: 32px;
@@ -215,6 +233,7 @@
   }
 
   .pagination {
+    padding-left: 10px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -222,8 +241,8 @@
     &__btn {
       @include btnTransparent;
       padding: 4px 8px;
-      width: 32px;
-      height: 32px;
+      max-width: 32px;
+      min-height: 32px;
       font-size: 16px;
       font-weight: 600;
       line-height: 16px;
@@ -247,7 +266,7 @@
 
 @media (max-width: 1410px) {
   .container--catalog {
-    padding-top: 12px;
+    padding-top: 7px;
     padding-bottom: 40px;
 
   }
@@ -257,10 +276,8 @@
     &__grid {
       padding-top: unset;
       padding-bottom: 30px;
-      row-gap: 32px;
       column-gap: 32px;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 24px 139px auto;
       grid-template-areas:
         "header header header header"
         "filters filters filters filters"
@@ -315,18 +332,17 @@
 
 @media (max-width: 1000px) {
   .container--catalog {
-    padding-top: 13px;
-    padding-bottom: 41px;
+    padding-bottom: 40px;
   }
 
   .catalog {
 
     &__grid {
-      grid-template-rows: 24px 140px auto;
-
+      row-gap: 26px;
     }
 
     .goods {
+      padding-top: 8px;
 
       &__item {
 
@@ -368,6 +384,7 @@
 
   .container--catalog {
     padding-top: unset;
+    padding-bottom: 41px;
   }
 
   .catalog {
@@ -375,7 +392,6 @@
 
     &__grid {
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 31px 227px auto;
       row-gap: 25px;
     }
 
@@ -398,13 +414,13 @@
     .goods {
 
       .grid {
-        grid-auto-rows: 278px;
         gap: 16px;
       }
 
       .goods {
         &__item {
           grid-column: auto / span 3;
+          min-height: 278px;
           padding: 13px 7px 18px 16px;
 
           &:nth-child(n)::after {
@@ -469,10 +485,14 @@
               padding: 9px 23px;
             }
 
-            &__price--purchase {
-              margin-bottom: 15px;
+            &__prices-full {
+              margin-bottom: 17px;
             }
           }
+        }
+
+        &__pagination {
+          padding-left: unset;
         }
       }
     }

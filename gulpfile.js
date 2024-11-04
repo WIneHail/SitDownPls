@@ -52,20 +52,20 @@ const cssTransfer = () => {
       'src/css/**/*.css'
    ])
       .pipe(concat('styles.css'))
-      .pipe(dest('dist'))
+      .pipe(dest('dist/css'))
       .pipe(browserSync.stream())
 }
 
 
 const styles = () => {
-   return src('dist/styles.css')
+   return src('dist/css/styles.css')
       .pipe(autoprefixer({
          cascade: false
       }))
       .pipe(cleanCSS({
          level: 2
       }))
-      .pipe(dest('dist'))
+      .pipe(dest('dist/css'))
 }
 
 const htmlMinify = () => {

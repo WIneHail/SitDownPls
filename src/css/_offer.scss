@@ -9,12 +9,13 @@
   }
 
 
-  &__grid {
-    grid-auto-rows: 511px;
-  }
+  // &__grid {
+  //   // grid-auto-rows: 511px;
+  // }
 
   &__card {
-    padding: 30px;
+    padding: 30px 30px 28px;
+    min-height: 511px;
     position: relative;
 
     .card__content {
@@ -182,7 +183,7 @@
 
 @media (max-width: 767px) {
   .container--offer {
-    padding-top: 40px;
+    padding-top: 38px;
   }
 
   .offer {
