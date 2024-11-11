@@ -1,23 +1,39 @@
 .hero {
+  position: relative;
   background-image: url('../img/hero_back-desk.png');
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+
+  &__header {
+    margin-bottom: 50px;
+    color: $fontColGray;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 65px;
+  }
+
+  &__btn {
+    @include btnFilled;
+  }
+
+  &__img-mobile {
+    position: absolute;
+    display: none;
+    left: 0;
+    top: 0;
+    min-height: 210px;
+    width: 100%;
+    z-index: -1;
+    background-image: url('../img/hero_back-320.png');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .container--hero {
   padding: 100px;
-}
-
-.hero__header {
-  margin-bottom: 50px;
-  color: $fontColGray;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 65px;
-}
-
-.hero__btn {
-  @include btnFilled;
 }
 
 @media (max-width: 1410px) {
@@ -44,16 +60,15 @@
   .container--hero {
     height: 100%;
     display: flex;
+    min-height: 334px;
     flex-direction: column;
     justify-content: space-between;
     padding: 31px 12px 31px;
   }
 
   .hero {
-    background-image: url('../img/hero_back-320.png');
-    background-position: top;
-    background-size: contain;
-    height: 334px;
+    background-image: none;
+
 
     &__header {
       padding: 0 18px;
@@ -65,6 +80,10 @@
     &__btn {
       max-width: unset;
       width: 100%;
+    }
+
+    &__img-mobile {
+      display: block;
     }
   }
 }

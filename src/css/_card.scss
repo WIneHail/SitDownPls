@@ -101,6 +101,13 @@
       }
     }
 
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      margin: 0 auto;
+    }
+
     &__badge {
       display: block;
       width: 22px;

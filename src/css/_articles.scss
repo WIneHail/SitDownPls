@@ -99,12 +99,10 @@
 
       &::before {
         height: 202px;
+        background-size: cover;
       }
 
       &:nth-child(1) {
-        .card__text {
-          max-width: 230px;
-        }
 
         &::before {
           background-image: url(../img/artc_1024-1.png);

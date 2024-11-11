@@ -193,10 +193,11 @@
       &:nth-child(n+3) {
         display: flex;
       }
+    }
 
-      .card__header {
-        margin-bottom: 20px;
-      }
+    .card__header {
+      margin-bottom: 20px;
+      min-width: 231px;
     }
   }
 }

@@ -541,7 +541,7 @@ input {
     padding-top: 9px;
   }
   .container {
-    max-width: 320px;
+    max-width: 600px;
     padding: 0 12px;
   }
   .grid {
@@ -916,6 +916,8 @@ input {
     top: 0;
   }
   .header .link--logo {
+    width: 100%;
+    text-align: center;
     z-index: 2;
     margin-left: unset;
     margin-bottom: 32px;
@@ -968,15 +970,12 @@ input {
   }
 }
 .hero {
+  position: relative;
   background-image: url("../img/hero_back-desk.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
-
-.container--hero {
-  padding: 100px;
-}
-
 .hero__header {
   margin-bottom: 50px;
   color: #999999;
@@ -984,7 +983,6 @@ input {
   font-size: 48px;
   line-height: 65px;
 }
-
 .hero__btn {
   padding: 19px 47px;
   color: white;
@@ -1017,6 +1015,23 @@ input {
   background-color: #EAEAEA;
   color: #999999;
 }
+.hero__img-mobile {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  min-height: 210px;
+  width: 100%;
+  z-index: -1;
+  background-image: url("../img/hero_back-320.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container--hero {
+  padding: 100px;
+}
 
 @media (max-width: 1410px) {
   .container--hero {
@@ -1038,15 +1053,13 @@ input {
   .container--hero {
     height: 100%;
     display: flex;
+    min-height: 334px;
     flex-direction: column;
     justify-content: space-between;
     padding: 31px 12px 31px;
   }
   .hero {
-    background-image: url("../img/hero_back-320.png");
-    background-position: top;
-    background-size: contain;
-    height: 334px;
+    background-image: none;
   }
   .hero__header {
     padding: 0 18px;
@@ -1057,6 +1070,9 @@ input {
   .hero__btn {
     max-width: unset;
     width: 100%;
+  }
+  .hero__img-mobile {
+    display: block;
   }
 }
 .container--offer {
@@ -1351,8 +1367,9 @@ input {
   .offer__card:nth-child(n):nth-child(n+3) {
     display: flex;
   }
-  .offer__card:nth-child(n) .card__header {
+  .offer .card__header {
     margin-bottom: 20px;
+    min-width: 231px;
   }
 }
 .container--highrated {
@@ -1433,9 +1450,24 @@ input {
 }
 
 .new {
+  position: relative;
   background-image: url("../img/new_back-desk.png");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+}
+.new__img-mobile {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  min-height: 210px;
+  width: 100%;
+  z-index: -1;
+  background-image: url(../img/new_back-320.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .new__content {
   margin-bottom: 47px;
@@ -1506,14 +1538,12 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
+    min-height: 320px;
     padding: 18px 12px;
   }
   .new {
-    height: 320px;
-    background-image: url(../img/new_back-320.png);
-    background-size: contain;
-    background-position: top;
+    min-height: 320px;
+    background-image: none;
   }
   .new__header {
     padding-top: 13px;
@@ -1528,6 +1558,9 @@ input {
   }
   .new__btn {
     max-width: 100%;
+  }
+  .new__img-mobile {
+    display: block;
   }
 }
 .container--top {
@@ -1714,6 +1747,7 @@ input {
   }
   .top__item .card__content {
     display: flex;
+    flex-direction: row;
     align-items: baseline;
   }
   .top__item .card__link-header {
@@ -1923,9 +1957,7 @@ input {
   }
   .articles__card::before {
     height: 202px;
-  }
-  .articles__card:nth-child(1) .card__text {
-    max-width: 230px;
+    background-size: cover;
   }
   .articles__card:nth-child(1)::before {
     background-image: url(../img/artc_1024-1.png);
@@ -2655,6 +2687,12 @@ input {
   }
   .card__header span {
     display: block;
+  }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin: 0 auto;
   }
   .card__badge {
     display: block;
