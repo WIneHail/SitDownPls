@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding: 80px 0;
 
   &__header {
     margin-bottom: 50px;
@@ -32,16 +33,10 @@
   }
 }
 
-.container--hero {
-  padding: 100px;
-}
-
 @media (max-width: 1410px) {
-  .container--hero {
-    padding: 80px 36px;
-  }
 
   .hero {
+    padding: 80px 0;
     background-image: url('../img/hero_back-1024.png');
   }
 }
@@ -67,11 +62,21 @@
   }
 
   .hero {
+    min-height: 334px;
+    padding: 30px 0;
     background-image: none;
 
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      min-height: 272px;
+    }
 
     &__header {
       padding: 0 18px;
+      margin-bottom: 0;
       font-size: 20px;
       font-weight: 700;
       line-height: 27px;

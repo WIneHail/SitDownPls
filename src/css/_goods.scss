@@ -4,14 +4,22 @@
   }
 
 
-  // &__grid {
-  //   grid-auto-rows: 420px;
-  // }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px
+  }
 
   &__item {
-    @include card(auto, 3);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     padding: 30px 7px 30px 30px;
+    max-width: 296px;
     min-height: 420px;
+    background-color: $backgColGray;
+
 
     &::before {
       content: "";
@@ -115,6 +123,14 @@
       &:nth-child(8) {
         display: none;
       }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .goods {
+    &__wrapper {
+      gap: 15px;
     }
   }
 }

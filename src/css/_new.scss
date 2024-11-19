@@ -1,14 +1,11 @@
-.container--new {
-  padding-top: 155px;
-  padding-bottom: 150px;
-}
-
 .new {
   position: relative;
   background-image: url('../img/new_back-desk.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-top: 155px;
+  padding-bottom: 150px;
 
   &__img-mobile {
     position: absolute;
@@ -70,17 +67,24 @@
 }
 
 @media (max-width: 767px) {
-  .container--new {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 320px;
-    padding: 18px 12px;
-  }
 
   .new {
+
+    padding: 18px 0;
     min-height: 320px;
     background-image: none;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      min-height: 285px;
+    }
+
+    &__content {
+      margin-bottom: unset;
+    }
 
     &__header {
       padding-top: 13px;
@@ -96,7 +100,8 @@
     }
 
     &__btn {
-      max-width: 100%;
+      max-width: unset;
+      width: 100%;
     }
 
     &__img-mobile {

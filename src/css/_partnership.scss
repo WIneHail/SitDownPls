@@ -1,5 +1,5 @@
 .container--partnership {
-  padding-top: 33px;
+  padding-top: 20px;
   padding-bottom: 48px;
 }
 
@@ -11,6 +11,10 @@
 }
 
 .partnership {
+
+  p {
+    hyphens: none;
+  }
 
   .breadcrumps {
     margin-bottom: 34px;

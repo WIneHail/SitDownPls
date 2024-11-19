@@ -10,13 +10,19 @@
   }
 
   &__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     min-height: 676px;
-    @include card(auto, 6);
-    padding: 28px 30px;
+    max-width: 624px;
+    padding: 30px;
+    background-color: $backgColGray;
 
     .card__text {
       min-height: 98px;
-      margin-bottom: 37px;
+      margin-bottom: 40px;
+      hyphens: none;
       font-size: 24px;
       font-weight: 400;
       line-height: 33px;
@@ -69,10 +75,10 @@
     }
   }
 
-
-  // &__grid {
-  //   grid-auto-rows: 676px;
-  // }
+  &__wrapper {
+    display: flex;
+    gap: 32px;
+  }
 
   &__btn {
     @include btnTransparent();
@@ -82,15 +88,14 @@
 
 @media (max-width: 1410px) {
   .articles {
-    // &__grid {
-    //   grid-auto-rows: 456px;
-    // }
 
     &__card {
-      grid-column: auto / span 3;
+      max-width: 296px;
       min-height: 456px;
+      padding: 30px 36px 30px 30px;
 
       .card__text {
+        max-width: 230px;
         margin-bottom: 30px;
         min-height: 110px;
         font-size: 16px;
@@ -124,6 +129,8 @@
 
   .articles {
     &__card {
+
+
       &:nth-child(3) {
         display: none;
       }
@@ -133,6 +140,12 @@
 
 @media (max-width: 767px) {
   .articles {
+
+    &__wrapper {
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
     &__card {
       grid-column: auto / span 6;
 

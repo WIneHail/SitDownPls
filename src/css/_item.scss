@@ -9,7 +9,7 @@
     position: relative;
     display: flex;
     justify-content: right;
-    padding: 35px 0;
+    padding: 21px 0 35px;
 
     &::before {
       content: "";
@@ -17,7 +17,7 @@
       display: block;
       width: 50%;
       left: 0;
-      top: 43px;
+      top: 30px;
       min-height: 245px;
       background-image: url(../img/D-31_big.png);
       background-repeat: no-repeat;
