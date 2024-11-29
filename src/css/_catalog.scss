@@ -1,9 +1,10 @@
 .catalog {
-  padding-top: 2px;
-  padding-bottom: 10px;
+  padding-top: 19px;
+  padding-bottom: 70px;
 
   &__header {
-    grid-area: header;
+    grid-column: 2;
+    grid-row: 1;
     font-size: 24px;
     font-weight: 400;
     line-height: 31.2px;
@@ -11,31 +12,15 @@
 
   &__grid {
     display: grid;
-    padding-top: 17px;
-    padding-bottom: 59px;
     row-gap: 24px;
     column-gap: 32px;
-    grid-template-columns: 296px repeat(3, 1fr);
-    // grid-template-rows: minmax(24px, 300px) 572px 329px 360px 60px;
-    grid-template-areas:
-      "filters header header header"
-      "filters goods goods goods"
-      ". goods goods goods"
-      ". goods goods goods"
-      ". goods goods goods"
-      ". goods goods goods"
-      ". goods goods goods"
-      ". goods goods goods"
-      ". goods goods goods"
-      ". goods goods goods"
-      ". goods goods goods"
-      ". goods goods goods"
-      "banner goods goods goods"
-      ". goods goods goods";
+    grid-template-columns: 296px 1fr;
+    grid-template-rows: 31px 352px auto 360px 39px;
   }
 
   .filters {
-    grid-area: filters;
+    grid-column: 1;
+    grid-row: 1 / span 2;
 
     &__form {
       display: flex;
@@ -137,7 +122,8 @@
   }
 
   .banner {
-    grid-area: banner;
+    grid-column: 1;
+    grid-row: 4 / span 1;
     display: flex;
     min-height: 360px;
     flex-direction: column;
@@ -210,7 +196,8 @@
   }
 
   .goods {
-    grid-area: goods;
+    grid-column: 2;
+    grid-row: 2 / span 4;
 
     &__header {
       font-weight: 400;
@@ -230,7 +217,6 @@
   }
 
   .pagination {
-    padding-left: 10px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -255,33 +241,35 @@
       color: white;
     }
 
-    &__btn:not(:last-child) {
-      margin-right: 14px;
+    &__btn:nth-child(1) {
+      margin-right: 18px;
     }
   }
 }
 
 @media (max-width: 1410px) {
-  .container--catalog {
-    padding-top: 7px;
-    padding-bottom: 40px;
+  .catalog {
+    padding-top: 17px;
 
   }
 
   .catalog {
 
     &__grid {
-      padding-top: unset;
-      padding-bottom: 30px;
-      column-gap: 32px;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-        "header header header header"
-        "filters filters filters filters"
-        "goods goods goods goods";
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 31px 144px auto;
+      row-gap: 27px;
+    }
+
+    &__header {
+      grid-column: 1;
+      grid-row: 1;
     }
 
     .filters {
+
+      grid-column: 1 / span 2;
+      grid-row: 2;
 
       &__header {
         display: none;
@@ -309,6 +297,8 @@
     }
 
     .goods {
+      grid-column: 1 / span 2;
+      grid-row: 3;
 
       &__item {
         grid-column: auto / span 3;
@@ -328,18 +318,18 @@
 }
 
 @media (max-width: 1000px) {
-  .container--catalog {
-    padding-bottom: 40px;
+  .catalog {
+    padding-top: 20px;
+    padding-bottom: 70px;
   }
 
   .catalog {
 
     &__grid {
-      row-gap: 26px;
+      row-gap: 25px;
     }
 
     .goods {
-      padding-top: 8px;
 
       &__item {
 
@@ -379,17 +369,15 @@
     display: none;
   }
 
-  .container--catalog {
+  .catalog {
     padding-top: unset;
-    padding-bottom: 41px;
   }
 
   .catalog {
     padding-top: unset;
 
     &__grid {
-      grid-template-columns: repeat(3, 1fr);
-      row-gap: 25px;
+      grid-template-rows: 31px minmax(144px, 227px) auto;
     }
 
     .filters {
@@ -404,7 +392,7 @@
       }
 
       .category:nth-child(2) {
-        margin-right: unset;
+        margin-right: 20px;
       }
     }
 

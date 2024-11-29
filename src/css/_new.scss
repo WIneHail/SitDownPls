@@ -58,11 +58,11 @@
 
   .new {
     background-image: url('../img/new_back-768.png');
-  }
 
-  .container--new {
-    padding-left: 36px;
-    padding-right: 36px;
+    .container {
+      padding-left: 36px;
+      padding-right: 36px;
+    }
   }
 }
 
@@ -79,6 +79,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+      padding: 0 12px;
       min-height: 285px;
     }
 
@@ -87,7 +88,7 @@
     }
 
     &__header {
-      padding-top: 13px;
+      padding-top: 15px;
       font-size: 24px;
       font-weight: 900;
       line-height: 29px;

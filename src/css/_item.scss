@@ -1,9 +1,6 @@
-.container--item {
+.item {
   padding-top: 3px;
   padding-bottom: 10px;
-}
-
-.item {
 
   .head {
     position: relative;
@@ -127,15 +124,9 @@
 
     .stats {
 
-      &__wrapper {
-        display: flex;
-        max-width: 328px;
-        white-space: nowrap;
-      }
-
       &__item {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: max-content auto max-content;
       }
 
       &__header {
@@ -222,13 +213,10 @@
 }
 
 @media (max-width: 1410px) {
-  .container--item {
-    padding-top: unset;
-    padding-bottom: 10px;
-  }
 
   .item {
-    padding-top: 3px;
+    padding-top: 16px;
+    padding-bottom: 10px;
 
     .head {
       padding-top: unset;
@@ -264,8 +252,8 @@
       }
 
       .stats {
-        &__wrapper {
-          max-width: 189px;
+        &__item {
+          grid-template-columns: max-content auto 216px;
         }
       }
     }
@@ -283,12 +271,10 @@
 }
 
 @media (max-width: 1000px) {
-  .container--item {
-    padding-bottom: 48px;
-  }
 
   .item {
-    padding-top: unset;
+    padding-top: 10px;
+    padding-bottom: 48px;
 
     .head {
       min-height: 630px;
@@ -327,12 +313,6 @@
           left: unset;
         }
       }
-
-      .stats {
-        &__wrapper {
-          max-width: 408px;
-        }
-      }
     }
 
     .similar {
@@ -350,11 +330,13 @@
 }
 
 @media (max-width: 767px) {
-  .item {
-    padding-top: unset;
+
+  .header--item {
+    padding-bottom: 23px;
   }
 
-  .container--item {
+  .item {
+    padding-top: unset;
     padding-bottom: 46px;
 
     .head {
@@ -435,6 +417,7 @@
 
       .stats {
         &__item {
+          display: flex;
           flex-direction: column;
         }
 
@@ -464,9 +447,13 @@
       }
 
       .goods {
+        &__wrapper {
+          justify-content: space-between;
+        }
+
         &__item {
-          grid-column: auto / span 3;
           padding: 13px 7px 17px 16px;
+          // max-width: 140px;
           min-height: 278px;
 
 
@@ -500,6 +487,7 @@
           .card {
 
             &__header {
+              max-width: 108px;
               margin-bottom: 16px;
               font-size: 16px;
               font-weight: 400;

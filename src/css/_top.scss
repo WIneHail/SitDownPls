@@ -113,12 +113,11 @@
   .top {
 
     &__grid {
-      // grid-template-rows: 511px 511px;
       gap: 32px;
     }
 
     &__item {
-      padding: 32px 29px 30px;
+      padding: 31px 29px 29px;
 
       &:nth-child(2) {
         order: 1;
@@ -168,7 +167,7 @@
         &::before {
           top: 127px;
           left: 0;
-          width: 378px;
+          width: 270px;
           height: 296px;
           background-image: url(../img/top_chair-1024.png);
         }

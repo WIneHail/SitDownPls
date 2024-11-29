@@ -85,7 +85,7 @@
   }
 
   &__link {
-    @include link (12px, 16.34px, $decorColPurple);
+    @include link (14px, 16.34px, $decorColPurple);
     text-decoration: underline;
   }
 }
@@ -124,9 +124,9 @@
 
     &::before {
       background-image: url(../img/feedback_back-768.png);
-      right: -49px;
+      right: 13px;
       top: 45px;
-      width: 40%;
+      width: 32%;
       min-height: 444px;
     }
 
@@ -148,6 +148,10 @@
 
     &__text span {
       display: block;
+    }
+
+    &__link {
+      font-size: 12px;
     }
 
     &__checkbox-label {

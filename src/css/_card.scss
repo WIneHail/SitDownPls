@@ -2,6 +2,7 @@
   border-radius: 10px;
 
   &__header {
+    max-width: 259px;
     margin-bottom: 25px;
     font-weight: 400;
     font-size: 24px;
@@ -60,7 +61,7 @@
     }
 
     .tags__link:not(:last-child) {
-      margin-right: 30px;
+      margin-right: 31px;
     }
   }
 

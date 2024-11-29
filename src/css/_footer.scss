@@ -16,6 +16,7 @@
 
     &__link {
       display: inline-block;
+      margin-bottom: 27px;
     }
 
     .nav {
@@ -89,10 +90,6 @@
     }
 
     .footer {
-
-      &__link {
-        margin-bottom: 27px;
-      }
 
       .nav {
 
@@ -178,22 +175,19 @@
       .nav {
         &__list {
           flex-wrap: wrap;
+          justify-content: space-between;
         }
 
         &__item-footer:nth-child(n) {
-          margin-right: unset;
-        }
-
-        &__item-footer:nth-child(1) {
-          margin-right: 73px;
+          margin-right: 5px;
         }
 
         &__item-footer:nth-child(-n+2) {
           margin-bottom: 27px;
         }
 
-        &__item-footer:nth-child(3) {
-          margin-right: 48px;
+        &__item-footer:nth-child(4) {
+          padding-right: 8px;
         }
 
       }

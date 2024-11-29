@@ -12,82 +12,84 @@
 <body>
   <header class="header">
     <div class="container container--header">
-      <div class="header__back"></div>
-      <a href="tel:+7(495)885-45-47" class="header__link link--phone">
-        <svg class="link--phone__badge">
-          <use xlink:href="img/sprite.svg#mdi_call"></use>
-        </svg>
-        +7 (495) 885-45-47
-      </a>
-      <nav class="header__nav-top nav">
-        <ul class="nav__list">
-          <li class="nav__item-top">
-            <a href="#" class="nav__link-top">О компании</a>
-          </li>
-          <li class="nav__item-top">
-            <a href="#" class="nav__link-top">Гарантия и возврат</a>
-          </li>
-          <li class="nav__item-top">
-            <a href="#" class="nav__link-top">Корпоративным клиентам</a>
-          </li>
-          <li class="nav__item-top">
-            <a href="#" class="nav__link-top">Дизайн-решение</a>
-          </li>
-        </ul>
-      </nav>
-      <a href="#" class="header__link link--logo">
-        <img class="header__logo" src="img/logo.png" alt="лого">
-      </a>
-      <nav class="header__nav-bottom nav">
-        <ul class="nav__list">
-          <li class="nav__item-bottom">
-            <a href="#" class="nav__link-bottom">Каталог</a>
-          </li>
-          <li class="nav__item-bottom">
-            <a href="#" class="nav__link-bottom">Магазины</a>
-          </li>
-          <li class="nav__item-bottom">
-            <a href="#" class="nav__link-bottom">Шоу-рум</a>
-          </li>
-          <li class="nav__item-bottom">
-            <a href="#" class="nav__link-bottom">Доставка и оплата</a>
-          </li>
-          <li class="nav__item-bottom">
-            <a href="#" class="nav__link-bottom">Дисконт</a>
-          </li>
-          <li class="nav__item-bottom">
-            <a href="#" class="nav__link-bottom">Контакты</a>
-          </li>
-        </ul>
-      </nav>
-      <form class="header__form form" method="get">
-        <svg class="form__badge">
-          <use xlink:href="img/sprite.svg#search"></use>
-        </svg>
-        <input type="text" class="form__input input--text" placeholder="Я хочу купить...">
-        <button class="form__btn btn" type="submit">
-          <!-- <svg class="btn__badge">
-                <use xlink:href="img/sprite.svg#arrow"></use>
-              </svg> -->
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
-            <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round" />
+      <div class="header__wrapper header__wrapper--top">
+        <a href="tel:+7(495)885-45-47" class="header__link link--phone">
+          <svg class="link--phone__badge">
+            <use xlink:href="img/sprite.svg#mdi_call"></use>
           </svg>
-        </button>
-      </form>
-      <div class="header__account account">
-        <button class="account__btn btn--acc" type="button" aria-label="Личный кабинет">
-          <svg class="account__badge">
-            <use xlink:href="img/sprite.svg#acc"></use>
+          +7 (495) 885-45-47
+        </a>
+        <nav class="header__nav-top nav">
+          <ul class="nav__list">
+            <li class="nav__item-top">
+              <a href="#" class="nav__link-top">О компании</a>
+            </li>
+            <li class="nav__item-top">
+              <a href="#" class="nav__link-top">Гарантия и возврат</a>
+            </li>
+            <li class="nav__item-top">
+              <a href="#" class="nav__link-top">Корпоративным клиентам</a>
+            </li>
+            <li class="nav__item-top">
+              <a href="#" class="nav__link-top">Дизайн-решение</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__wrapper header__wrapper--mid">
+        <a href="#" class="header__link link--logo">
+          <img class="header__logo" src="img/logo.png" alt="лого">
+        </a>
+        <nav class="header__nav-bottom nav">
+          <ul class="nav__list">
+            <li class="nav__item-bottom">
+              <a href="./catalog.html" class="nav__link-bottom">Каталог</a>
+            </li>
+            <li class="nav__item-bottom">
+              <a href="#" class="nav__link-bottom">Магазины</a>
+            </li>
+            <li class="nav__item-bottom">
+              <a href="#" class="nav__link-bottom">Шоу-рум</a>
+            </li>
+            <li class="nav__item-bottom">
+              <a href="#" class="nav__link-bottom">Доставка и оплата</a>
+            </li>
+            <li class="nav__item-bottom">
+              <a href="#" class="nav__link-bottom">Дисконт</a>
+            </li>
+            <li class="nav__item-bottom">
+              <a href="#" class="nav__link-bottom">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__wrapper header__wrapper--bot">
+        <form class="header__form form" method="get">
+          <svg class="form__badge">
+            <use xlink:href="img/sprite.svg#search"></use>
           </svg>
-        </button>
-        <button class="account__btn btn--cart" type="button" aria-label="Корзина">
-          <span class="btn--cart__counter">0</span>
-          <svg class="account__badge">
-            <use xlink:href="img/sprite.svg#cart"></use>
-          </svg>
-        </button>
+          <input type="text" class="form__input input--text" placeholder="Я хочу купить...">
+          <button class="form__btn btn" type="submit">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </form>
+        <div class="header__account account">
+          <button class="account__btn btn--acc" type="button" aria-label="Личный кабинет">
+            <svg class="account__badge">
+              <use xlink:href="img/sprite.svg#acc"></use>
+            </svg>
+          </button>
+          <button class="account__btn btn--cart" type="button" aria-label="Корзина">
+            <span class="btn--cart__counter">0</span>
+            <svg class="account__badge">
+              <use xlink:href="img/sprite.svg#cart"></use>
+            </svg>
+          </button>
+        </div>
       </div>
       <nav class="breadcrumps">
         <ul class="breadcrumps__list">

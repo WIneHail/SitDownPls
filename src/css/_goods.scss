@@ -13,10 +13,11 @@
   &__item {
     position: relative;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: end;
     padding: 30px 7px 30px 30px;
-    max-width: 296px;
+    // max-width: 296px;
     min-height: 420px;
     background-color: $backgColGray;
 

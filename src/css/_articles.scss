@@ -147,7 +147,12 @@
     }
 
     &__card {
-      grid-column: auto / span 6;
+      max-width: unset;
+      width: 100%;
+
+      .card__text {
+        max-width: unset;
+      }
 
       &:nth-child(4)::before {
         background-image: url(../img/artc_1024-4.png);

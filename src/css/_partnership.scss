@@ -1,8 +1,3 @@
-.container--partnership {
-  padding-top: 20px;
-  padding-bottom: 48px;
-}
-
 .partners,
 .gets,
 .advantages,
@@ -11,6 +6,8 @@
 }
 
 .partnership {
+  padding-top: 20px;
+  padding-bottom: 48px;
 
   p {
     hyphens: none;
@@ -156,27 +153,24 @@
 }
 
 @media (max-width: 1410px) {
-  .container--partnership {
-    padding-top: 12px;
+  .partnership {
+    padding-top: 6px;
     padding-bottom: 50px;
   }
 }
 
 @media (max-width: 1000px) {
-  .container--partnership {
-    padding-top: 15px;
+  .partnership {
+    padding-top: 21px;
     padding-bottom: 50px;
   }
 }
 
 @media (max-width: 767px) {
-  .container--partnership {
-    padding-top: 1px;
-    padding-bottom: 27px;
-  }
 
   .partnership {
-    padding-bottom: unset;
+    padding-top: 6px;
+    padding-bottom: 27px;
 
     &__header {
       font-size: 24px;
