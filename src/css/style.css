@@ -451,31 +451,61 @@ input {
   padding: 0 100px;
 }
 
-.header--main {
+.header-main {
   font-weight: 400;
   font-size: 32px;
   line-height: 32px;
   color: #333333;
 }
 @media (max-width: 760px) {
-  .header--main {
+  .header-main {
     font-size: 24px;
     font-weight: 400;
     line-height: 24px;
   }
 }
 
-.link--logo:focus {
+.link-phone {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  color: #FF862F;
+  outline: none;
+  font-size: 14px;
+}
+@media (hover: hover) {
+  .link-phone:hover {
+    color: #FFBD59;
+  }
+}
+.link-phone:focus {
+  color: #FF862F;
+  background-color: #FFBD59;
+}
+.link-phone:active {
+  color: #BB370E;
+  background-color: transparent;
+}
+.link-phone__badge {
+  width: 22px;
+  height: 22px;
+}
+.link-phone-logo {
+  display: flex;
+  align-items: center;
+}
+.link-phone-logo:focus {
   background-color: #EBD1FF;
 }
 
-.input--checkbox {
+.input-checkbox {
   position: absolute;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-.input--checkbox::before {
+.input-checkbox::before {
   content: "";
   position: absolute;
   top: 1px;
@@ -486,7 +516,7 @@ input {
   border: 1px solid #999999;
   transition: outline 0.3s ease-in-out;
 }
-.input--checkbox::after {
+.input-checkbox::after {
   content: "";
   position: absolute;
   width: 4px;
@@ -499,16 +529,16 @@ input {
   transform: rotate(45deg);
   opacity: 0;
 }
-.input--checkbox:focus-visible {
+.input-checkbox:focus-visible {
   outline: none;
 }
-.input--checkbox:checked::after {
+.input-checkbox:checked::after {
   opacity: 1;
 }
-.input--checkbox:checked::before {
+.input-checkbox:checked::before {
   background-color: #A65CF0;
 }
-.input--checkbox:focus::before {
+.input-checkbox:focus::before {
   outline: 1px solid #A65CF0;
 }
 
@@ -670,37 +700,6 @@ input {
   stroke: #999999;
 }
 
-.link--phone {
-  display: flex;
-  align-items: center;
-  z-index: 1;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  color: #FF862F;
-  outline: none;
-  font-size: 14px;
-}
-@media (hover: hover) {
-  .link--phone:hover {
-    color: #FFBD59;
-  }
-}
-.link--phone:focus {
-  color: #FF862F;
-  background-color: #FFBD59;
-}
-.link--phone:active {
-  color: #BB370E;
-  background-color: transparent;
-}
-.link--phone__badge {
-  width: 22px;
-  height: 22px;
-}
-.link--logo {
-  display: flex;
-  align-items: center;
-}
-
 .nav__list {
   display: flex;
   flex-wrap: wrap;
@@ -782,12 +781,12 @@ input {
   margin-right: 23px;
 }
 
-.btn--acc {
+.btn-acc {
   width: 28px;
   height: 29px;
 }
 
-.btn--cart {
+.btn-cart {
   position: relative;
   display: flex;
   justify-content: end;
@@ -795,7 +794,7 @@ input {
   width: 49px;
   height: 34px;
 }
-.btn--cart__counter {
+.btn-cart__counter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -811,7 +810,7 @@ input {
   line-height: 10px;
   color: white;
 }
-.btn--cart .account__badge {
+.btn-cart .account__badge {
   width: 30px;
   height: 28px;
 }
@@ -2258,7 +2257,7 @@ input {
   display: flex;
   flex-direction: column;
 }
-.footer .nav__item-footer .link--header {
+.footer .nav__item-footer .link-header {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
@@ -2856,12 +2855,12 @@ input {
   font-weight: 400;
   line-height: 21px;
 }
-.catalog .filters .category .input--checkbox::before {
+.catalog .filters .category .input-checkbox::before {
   left: 0;
   width: 18px;
   height: 18px;
 }
-.catalog .filters .category .input--checkbox::after {
+.catalog .filters .category .input-checkbox::after {
   width: 6px;
   height: 10px;
   top: 4px;
@@ -2877,7 +2876,7 @@ input {
   flex-wrap: wrap;
   align-items: center;
 }
-.catalog .filters .price .price--min,
+.catalog .filters .price .price-min,
 .catalog .filters .price .price__text {
   margin-right: 9px;
 }
@@ -3025,7 +3024,7 @@ input {
 .catalog .pagination__btn:nth-child(3) {
   display: none;
 }
-.catalog .pagination__btn.btn--active {
+.catalog .pagination__btn.btn-active {
   background-color: #7033AC;
   border-color: #7033AC;
   color: white;
@@ -3261,7 +3260,7 @@ input {
   display: flex;
   flex-direction: column;
 }
-.item .head__btn.btn--buy {
+.item .head__btn.btn-buy {
   padding: 19px 47px;
   color: white;
   background-color: #A65CF0;
@@ -3281,24 +3280,24 @@ input {
   line-height: 16px;
 }
 @media (hover: hover) {
-  .item .head__btn.btn--buy:hover {
+  .item .head__btn.btn-buy:hover {
     background-color: #C998FB;
   }
 }
-.item .head__btn.btn--buy:focus {
+.item .head__btn.btn-buy:focus {
   background-color: #C998FB;
   border: 3px solid #7033AC;
 }
-.item .head__btn.btn--buy:active {
+.item .head__btn.btn-buy:active {
   background-color: #7033AC;
   border: 3px solid #7033AC;
 }
-.item .head__btn.btn--buy:disabled {
+.item .head__btn.btn-buy:disabled {
   border: 3px solid #EAEAEA;
   background-color: #EAEAEA;
   color: #999999;
 }
-.item .head__btn.btn--add-to-cart {
+.item .head__btn.btn-add-to-cart {
   font-weight: 400;
   font-size: 16px;
   line-height: 21px;
@@ -3307,15 +3306,15 @@ input {
   margin-bottom: 13px;
 }
 @media (hover: hover) {
-  .item .head__btn.btn--add-to-cart:hover {
+  .item .head__btn.btn-add-to-cart:hover {
     color: #A65CF0;
   }
 }
-.item .head__btn.btn--add-to-cart:focus {
+.item .head__btn.btn-add-to-cart:focus {
   color: #7033AC;
   background-color: #EBD1FF;
 }
-.item .head__btn.btn--add-to-cart:active {
+.item .head__btn.btn-add-to-cart:active {
   background-color: unset;
 }
 .item .description {

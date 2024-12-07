@@ -46,6 +46,8 @@
   }
 }
 
+
+
 .form {
   position: relative;
 
@@ -102,30 +104,10 @@
     @include animationSvgArrow;
 
   }
-}
-
-
-.link {
-  &--phone {
-    display: flex;
-    align-items: center;
-    z-index: 1;
-    @include linkSvgBadge();
-    font-size: 14px;
-
-
-    &__badge {
-      width: 22px;
-      height: 22px;
-    }
-  }
-
-  &--logo {
-    display: flex;
-    align-items: center;
-  }
 
 }
+
+
 
 
 .nav {
@@ -172,12 +154,12 @@
   }
 }
 
-.btn--acc {
+.btn-acc {
   width: 28px;
   height: 29px;
 }
 
-.btn--cart {
+.btn-cart {
   position: relative;
   display: flex;
   justify-content: end;

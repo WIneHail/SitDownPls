@@ -57,13 +57,13 @@
         line-height: 21px;
       }
 
-      .input--checkbox::before {
+      .input-checkbox::before {
         left: 0;
         width: 18px;
         height: 18px;
       }
 
-      .input--checkbox::after {
+      .input-checkbox::after {
         width: 6px;
         height: 10px;
         top: 4px;
@@ -87,7 +87,7 @@
       }
 
 
-      .price--min,
+      .price-min,
       .price__text {
         margin-right: 9px;
       }
@@ -235,7 +235,7 @@
       }
     }
 
-    &__btn.btn--active {
+    &__btn.btn-active {
       background-color: $colorBlackPurp;
       border-color: $colorBlackPurp;
       color: white;

@@ -65,7 +65,7 @@
       flex-direction: column
     }
 
-    &__btn.btn--buy {
+    &__btn.btn-buy {
       @include btnFilled;
       margin-bottom: 14px;
       padding: 16px 33px;
@@ -74,7 +74,7 @@
       line-height: 16px;
     }
 
-    &__btn.btn--add-to-cart {
+    &__btn.btn-add-to-cart {
       @include link (16px, 21px, $decorColPurple);
       margin-bottom: 13px;
     }
